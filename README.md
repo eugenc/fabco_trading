@@ -1,5 +1,7 @@
 # FAF Trading — fafco.ca (Stage 1)
 
+**Source:** [github.com/eugenc/fabco_trading](https://github.com/eugenc/fabco_trading)
+
 Public **EN / FR** catalogue (Import Food, Import Feed, Export), **Request a quote** flow, and transactional emails (buyer confirmation + internal copy). Stages 2–3 are documented in [`CARE.md`](./CARE.md).
 
 ## Setup
