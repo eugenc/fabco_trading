@@ -1,0 +1,421 @@
+{
+  "meta": {
+    "title": "FAFCO — Food & Feed Trading | Agricultural commodities",
+    "description": "B2B supply of food products, feed materials, and agricultural commodities. Canada, Europe, and global markets.",
+    "siteName": "FAFCO",
+    "pages": {
+      "products": {
+        "title": "Products | FAFCO",
+        "description": "Food, feed, and export commodity lines. Request a tailored B2B quote for volumes and specifications."
+      },
+      "about": {
+        "title": "About us | FAFCO",
+        "description": "International B2B trading in food, feed, and agricultural commodities — reliable supply and transparent terms."
+      },
+      "contact": {
+        "title": "Contact & request a quote | FAFCO",
+        "description": "Request a quote, partnership, or sourcing support. We confirm by email and follow up with your team."
+      },
+      "logistics": {
+        "title": "Logistics & supply chain | FAFCO",
+        "description": "Full-cycle sourcing, quality control, consolidation, and delivery — truck and sea freight worldwide."
+      },
+      "privacy": {
+        "title": "Privacy policy | FAFCO",
+        "description": "How FAFCO collects, uses, and protects personal information when you use fafco.ca and request a quote."
+      },
+      "import": {
+        "title": "Import supply | FAFCO",
+        "description": "Imported food and feed products for distributors and industrial buyers — flexible terms and logistics support."
+      },
+      "export": {
+        "title": "Export commodities | FAFCO",
+        "description": "Export-oriented agricultural, wood, and crop nutrition products from Canada and international markets."
+      },
+      "markets": {
+        "title": "Markets & regions | FAFCO",
+        "description": "Where we operate: Canada, Europe, Eastern Europe, Middle East, Asia, Latin America, and the United States."
+      }
+    },
+    "categories": {
+      "food": {
+        "title": "Food products | FAFCO",
+        "description": "Sugar, salt, rice, oils, flour, grains, preserves, honey, fruits, juices, and more — B2B supply."
+      },
+      "feed": {
+        "title": "Feed products | FAFCO",
+        "description": "Soybean cake, sunflower meal, feed grains, custom blends, and feed-grade oils and fats."
+      },
+      "export": {
+        "title": "Export products | FAFCO",
+        "description": "Canola, pulses, hops, lumber, wood pellets, pulp, and fertilizers from Canada and international markets."
+      }
+    }
+  },
+  "nav": {
+    "brandName": "FAFCO",
+    "brandTagline": "Food & Feed Trading",
+    "home": "Home",
+    "about": "About us",
+    "products": "Products",
+    "import": "Import",
+    "export": "Export",
+    "logistics": "Logistics",
+    "markets": "Markets",
+    "contact": "Contact",
+    "quoteCta": "Request a quote",
+    "privacy": "Privacy",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "pageHero": {
+    "eyebrowHome": "FAFCO · Food & Feed Trading",
+    "eyebrowAbout": "About us",
+    "eyebrowProducts": "Product catalog",
+    "eyebrowImport": "Import",
+    "eyebrowExport": "Export",
+    "eyebrowLogistics": "Logistics",
+    "eyebrowMarkets": "Markets",
+    "eyebrowContact": "Contact",
+    "eyebrowPrivacy": "Legal",
+    "imageAltAbout": "Business team collaborating at a table",
+    "imageAltContact": "Professionals meeting and discussing partnership",
+    "imageAltExport": "Cargo aircraft and logistics — international freight",
+    "imageAltImport": "Shipping containers at a port — import logistics",
+    "imageAltLogistics": "Commercial trucks and freight transport on the road",
+    "imageAltMarkets": "Agricultural landscape — sourcing regions and supply",
+    "imageAltProducts": "Agricultural commodities and bulk grain",
+    "imageAltPrivacy": "Business analytics and compliance planning",
+    "imageAltCategoryFood": "Food ingredients and packaged goods for B2B supply",
+    "imageAltCategoryFeed": "Animal feed and agricultural materials in bulk",
+    "imageAltCategoryExport": "Global shipping and export commodities"
+  },
+  "home": {
+    "heroTitle": "Reliable supply of food, feed and agricultural commodities",
+    "heroImageAlt": "Warehouse logistics and stacked goods — international supply chain",
+    "heroIntro": "Consistent supply from trusted producers, with full logistics from origin to destination. We operate across Canada, Europe, and Eastern Europe, with partnerships in the Middle East, Asia, Latin America, and the United States.",
+    "specialize": "We specialize in B2B supply of food products, feed materials, and agricultural commodities.",
+    "heroBullets": [
+      "Direct sourcing from producers",
+      "Containerized & bulk shipments",
+      "Flexible delivery terms (FOB / CIF / EXW)",
+      "International logistics expertise"
+    ],
+    "productPreviewEyebrow": "Product catalog",
+    "advantagesEyebrow": "Why FAFCO",
+    "advantagesLead": "What buyers and partners gain when working with us across sourcing, quality, and logistics.",
+    "advantagesTitle": "Key advantages",
+    "advantagesCards": [
+      {
+        "title": "Direct sourcing",
+        "subtitle": "Trusted producer relationships with transparency from farm to load.",
+        "imageAlt": "Agricultural commodities and bulk materials at origin"
+      },
+      {
+        "title": "Quality & compliance",
+        "subtitle": "Rigorous controls and documentation aligned with international standards.",
+        "imageAlt": "Inspector in protective clothing reviewing food products on a production line"
+      },
+      {
+        "title": "Flexible delivery terms",
+        "subtitle": "FOB, CIF, EXW and more — structured to match your lanes and risk profile.",
+        "imageAlt": "Commercial documentation and delivery planning"
+      },
+      {
+        "title": "International logistics",
+        "subtitle": "Coordination across ports, carriers, and corridors worldwide.",
+        "imageAlt": "Cargo vessel and maritime freight transport"
+      },
+      {
+        "title": "Container & bulk",
+        "subtitle": "Hands-on experience with container loads and bulk movements end to end.",
+        "imageAlt": "Warehouse storage and stacked container logistics"
+      },
+      {
+        "title": "Tailored B2B supply",
+        "subtitle": "Programs built around your volumes, specifications, and timelines.",
+        "imageAlt": "Business team collaborating on supply strategy"
+      }
+    ],
+    "aboutPreviewTitle": "About FAFCO",
+    "aboutPreviewBody": "We are built on hands-on experience in agriculture, logistics, and international trade — from production and storage to transportation and final delivery.",
+    "aboutPreviewHighlights": [
+      "Agriculture & production",
+      "Logistics & storage",
+      "International B2B trade"
+    ],
+    "aboutPreviewImageAlt": "FAFCO truck with company branding at a logistics and food center facility",
+    "aboutPreviewImageCaption": "Fleet and facilities supporting food and feed supply across our markets.",
+    "aboutPreviewCta": "Learn more",
+    "productPreviewTitle": "Product categories",
+    "productPreviewLead": "Structured sourcing across food, feed, and export commodities — with clear lines and inquiry support.",
+    "exploreCta": "Explore",
+    "catFood": "Food products",
+    "catFoodLead": "Sugar, salt, rice, oils, grains, preserves, and more.",
+    "catFoodImageAlt": "Food ingredients and pantry staples for B2B sourcing",
+    "catFeed": "Feed products",
+    "catFeedLead": "Soybean cake, meals, grains, blends, and feed-grade oils & fats.",
+    "catFeedImageAlt": "Grain and feed materials for animal nutrition supply",
+    "catExport": "Export commodities",
+    "catExportLead": "Pulses, canola, hops, wood products, fertilizers, and NPK blends.",
+    "catExportImageAlt": "Cargo ship at sea — international export logistics",
+    "splitEyebrow": "Trade programs",
+    "splitTitle": "Import & export",
+    "splitSectionLead": "Structured import programs for food and feed buyers, and export sourcing for agricultural, wood, and crop nutrition lines.",
+    "splitImportTitle": "Import supply",
+    "splitImportBody": "Food and feed lines for supermarkets, distributors, and industrial buyers — with packaging and delivery flexibility.",
+    "splitImportImageAlt": "Warehouse storage and stacked pallets — inbound food and feed supply",
+    "splitExportTitle": "Export commodities",
+    "splitExportBody": "Canadian and international sourcing for agricultural, wood, and crop nutrition products.",
+    "splitExportImageAlt": "Cargo ship at sea — international movement of export commodities",
+    "splitImportCta": "Explore import",
+    "splitExportCta": "Explore export",
+    "logisticsEyebrow": "Supply chain",
+    "logisticsSectionTitle": "From sourcing to final delivery",
+    "logisticsSectionLead": "We coordinate sourcing, quality, documentation, consolidation, transport, and delivery with trusted partners.",
+    "logisticsLearnMoreCta": "Learn more about FAFCO logistics services",
+    "logisticsStepCards": [
+      {
+        "title": "Sourcing",
+        "subtitle": "Vetted suppliers, specifications, and transparent origin."
+      },
+      {
+        "title": "Quality control",
+        "subtitle": "Inspections, documentation, and compliance with your standards."
+      },
+      {
+        "title": "Storage / consolidation",
+        "subtitle": "Warehousing, blending, and load planning with partners."
+      },
+      {
+        "title": "Transport",
+        "subtitle": "Ocean, rail, and road moves coordinated end to end."
+      },
+      {
+        "title": "Delivery",
+        "subtitle": "Hand-off to destination with clear milestones."
+      }
+    ],
+    "marketsEyebrow": "Our footprint",
+    "marketsTitle": "Markets served",
+    "marketsLead": "International footprint with long-term partnerships across key regions.",
+    "marketsRegionsLabel": "Regions we cover",
+    "marketsMapImageAlt": "World map showing FAFCO regional hubs",
+    "marketsSeeCta": "See what markets FAFCO serves",
+    "regions": [
+      "Canada",
+      "Europe",
+      "Eastern Europe",
+      "Middle East",
+      "Asia",
+      "Latin America",
+      "United States"
+    ],
+    "ctaEyebrow": "Get started",
+    "ctaTitle": "Looking for a reliable supply partner?",
+    "ctaBody": "Tell us what product, volume, and destination you need — our team will prepare a supply solution tailored to your business.",
+    "ctaButton": "Get a Quote in 24 Hours",
+    "featuredEyebrow": "Portfolio",
+    "featuredTitle": "Featured products",
+    "featuredLead": "High-demand categories from our portfolio — request a tailored quote for your volumes and specifications.",
+    "ctaCatalog": "View products",
+    "ctaQuote": "Request a quote"
+  },
+  "products": {
+    "title": "Products",
+    "lead": "Explore food, feed, and export lines. Select a category for product groups and inquiry options.",
+    "food": "Food products",
+    "feed": "Feed products",
+    "export": "Export products",
+    "requestQuote": "Request quote",
+    "viewCategory": "View category",
+    "catalogSearchLabel": "Search products",
+    "catalogSearchPlaceholder": "Type to filter — suggestions appear as you type",
+    "filterCategory": "Category",
+    "filterCategoryAll": "All categories",
+    "filterGroup": "Product group",
+    "filterGroupAll": "All groups",
+    "clearFilters": "Clear filters",
+    "catalogNoResults": "No products match your filters. Try adjusting search or filters.",
+    "cardViewProduct": "View product"
+  },
+  "productPage": {
+    "metaTitle": "{productName} | {categoryName} | FAFCO",
+    "metaDescription": "Request a B2B quote for {productName} via FAFCO. We coordinate specifications, documentation, and delivery terms for buyers in {categoryName} and related corridors.",
+    "breadcrumbProducts": "Products",
+    "introLead": "{productName} — B2B supply through FAFCO. We work with distributors, industrial buyers, and procurement teams that need reliable volumes, clear specifications, and disciplined execution.",
+    "body1": "Tell us your target specifications, destination, and preferred commercial terms. Our team confirms feasibility, sourcing options, and next steps — including documentation and logistics alignment where required.",
+    "body2": "Availability, grades, and packaging can vary by season and corridor. We structure each inquiry around your quality expectations, incoterms, and delivery window.",
+    "supplyTitle": "Supply & specifications",
+    "supplyBody": "We align on product scope, quality parameters, and packaging expectations before quoting. Where multiple grades or origins are possible, we propose options that match your market and margin requirements.",
+    "logisticsTitle": "Logistics & terms",
+    "logisticsBody": "Depending on the corridor, we support FOB, CIF, EXW, and other commercially relevant terms. We coordinate documentation and hand-off points with vetted logistics partners.",
+    "formatsTitle": "Packaging / formats",
+    "ctaQuote": "Request a quote",
+    "ctaContact": "Contact us",
+    "backToCategory": "Back to {categoryName}",
+    "heroAlt": "{productName} — {categoryName}"
+  },
+  "contact": {
+    "title": "Contact & request a quote",
+    "lead": "Tell us what you need, your destination, and how to reach you. We confirm by email and follow up promptly.",
+    "sectionEyebrow": "Get in touch",
+    "sectionHeadline": "Tell us what you need",
+    "sectionSubheadline": "Complete the form and we’ll confirm by email. For a faster line, use the phone or email in the panel on the right.",
+    "inquiryType": "What can we help you with?",
+    "inquiryHint": "Choose one option — you can add details below.",
+    "inquiryTypes": {
+      "quote": "Price Quote",
+      "general": "General Message",
+      "sourcing": "Product Sourcing",
+      "partnership": "Partnership"
+    },
+    "product": "Product interest",
+    "productPlaceholder": "Select a product line (optional)",
+    "productGeneral": "General — not product-specific",
+    "variation": "Packaging / format",
+    "variationPlaceholder": "Select packaging",
+    "quantity": "Required volume",
+    "unit": "Unit",
+    "units": {
+      "mt": "Metric tonnes (MT)",
+      "kg": "Kilograms (kg)",
+      "pallets": "Pallets",
+      "containers": "Containers (20ft / 40ft)",
+      "units": "Units"
+    },
+    "company": "Company",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "country": "Country",
+    "message": "Message (optional)",
+    "submit": "Send inquiry",
+    "submitting": "Sending…",
+    "success": "Thank you. A confirmation has been sent to your email.",
+    "error": "Something went wrong. Please try again or email us directly.",
+    "details": {
+      "sidebarTitle": "Contact details",
+      "phoneLabel": "Phone",
+      "phoneValue": "+1 (555) 012-3456",
+      "emailLabel": "Email",
+      "emailValue": "info@fafco.ca",
+      "addressLabel": "Mailing address",
+      "addressValue": "FAFCO\nToronto, ON\nCanada",
+      "locationsTitle": "Locations",
+      "canadaTitle": "Canada",
+      "canadaBody": "Toronto, Ontario — head office and North American trade coordination.",
+      "germanyTitle": "Germany",
+      "germanyBody": "Frankfurt area — European operations and partner coordination.",
+      "dubaiTitle": "Dubai, UAE",
+      "dubaiBody": "Dubai — Middle East market coverage and regional partnerships."
+    }
+  },
+  "importPage": {
+    "title": "Import supply",
+    "intro": "We source food and feed products for B2B buyers that need reliable volumes, documentation, and logistics coordination.",
+    "foodTitle": "Food product imports",
+    "foodBody": "From staple ingredients to preserved goods and beverages — aligned with wholesale and retail distribution needs.",
+    "feedTitle": "Feed product imports",
+    "feedBody": "Protein meals, grains, custom blends, and energy components for livestock and poultry sectors.",
+    "termsTitle": "Packaging & delivery terms",
+    "termsBody": "Flexible packaging where available and commercial terms including FOB, CIF, and EXW — structured to your corridor and incoterms preference.",
+    "logisticsTitle": "Logistics support",
+    "logisticsBody": "We coordinate consolidation, documentation, and transport with vetted international logistics partners.",
+    "cta": "Request a quote"
+  },
+  "exportPage": {
+    "title": "Export commodities",
+    "intro": "Export-oriented products from Canada and international markets — with emphasis on documentation, compliance, and reliable shipment execution.",
+    "agTitle": "Agricultural commodities",
+    "agBody": "Including canola oil, lentils, peas, and related lines subject to seasonality and specifications.",
+    "specialTitle": "Special crops",
+    "specialBody": "Including hops and other specialty agricultural products.",
+    "woodTitle": "Industrial & wood products",
+    "woodBody": "Lumber, pellets, logs, and wood pulp grades as per market availability.",
+    "fertTitle": "Fertilizers & crop nutrition",
+    "fertBody": "Potash, nitrogen, phosphate, and custom NPK blends tailored to soil and crop requirements.",
+    "complianceTitle": "Documentation & compliance",
+    "complianceBody": "We support quality control and documentation workflows aligned with international trade practice.",
+    "cta": "Request a quote"
+  },
+  "marketsPage": {
+    "title": "Markets & regions",
+    "lead": "FAFCO operates across multiple regions with a growing network of producers, logistics partners, and buyers.",
+    "note": "Exact corridors and availability depend on product and season — tell us your destination and we will advise feasibility.",
+    "cta": "Discuss your market requirements"
+  },
+  "about": {
+    "title": "About us",
+    "lead": "International B2B trading in food, feed, and agricultural commodities — reliable supply and transparent terms.",
+    "body": "FAFCO is an international B2B trading company focused on the supply of food products, feed materials, and agricultural commodities. We are built on hands-on experience in agriculture, logistics, and international trade. We understand the full supply chain — from production and storage to transportation and final delivery. Our goal is to provide reliable supply, transparent terms, and long-term partnerships. We work with partners across Canada, Europe, and Eastern Europe, offering flexible solutions tailored to each client's needs.",
+    "missionTitle": "Mission & approach",
+    "missionBody": "We focus on transparent terms, disciplined execution, and long-term relationships — not one-off transactions.",
+    "whyTitle": "Why clients work with us",
+    "whyBullets": [
+      "Hands-on trade and logistics experience",
+      "Clear communication on specifications and documentation",
+      "Flexible volumes aligned to commercial reality",
+      "Partnership mindset for repeat supply"
+    ],
+    "cta": "Start a conversation"
+  },
+  "logistics": {
+    "title": "Logistics & supply chain",
+    "intro": "We provide full-cycle supply chain management:",
+    "bullets": [
+      "Sourcing directly from producers",
+      "Quality control and documentation",
+      "Storage and cargo consolidation",
+      "Transportation (truck / sea)",
+      "Delivery to final destination"
+    ],
+    "footer": "We work with reliable international logistics partners and ensure transparency at every stage of the supply process.",
+    "incotermsTitle": "Flexible Incoterms",
+    "incotermsBody": "We work with FOB, CIF, EXW and other commercially relevant terms depending on corridor, product, and buyer preference."
+  },
+  "supply": {
+    "title": "Supply capabilities",
+    "bullets": [
+      "Tailored solutions for each client",
+      "Contract-based supply",
+      "Flexible volumes",
+      "Product sourcing based on client requirements",
+      "Long-term partnership opportunities"
+    ]
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "updated": "Last updated: March 2026",
+    "intro": "FAFCO (“we”, “us”) respects your privacy. This policy describes how we collect, use, and disclose personal information when you use fafco.ca (the “Site”) and request a quote, in line with applicable Canadian privacy law including the Personal Information Protection and Electronic Documents Act (PIPEDA) where it applies.",
+    "contactTitle": "Who we are",
+    "contactBody": "For questions about this policy or your personal information, contact us at the email address shown on our website.",
+    "collectTitle": "What we collect",
+    "collectBody": "We may collect contact details you provide (name, company, email, phone), message content, and details of products or volumes you request. We also collect technical data such as IP address, browser type, and pages visited, through our hosting and analytics providers.",
+    "useTitle": "How we use information",
+    "useBody": "We use this information to respond to quote requests, operate and improve the Site, communicate with you, comply with law, and protect our legitimate business interests.",
+    "shareTitle": "Sharing",
+    "shareBody": "We do not sell your personal information. We may share information with service providers (e.g. email delivery, hosting) who assist us under contract, and when required by law.",
+    "retentionTitle": "Retention",
+    "retentionBody": "We retain information as long as needed for the purposes above and as required by law.",
+    "rightsTitle": "Your choices",
+    "rightsBody": "Depending on applicable law, you may request access to or correction of your personal information. We will respond within a reasonable time.",
+    "intlTitle": "International transfers",
+    "intlBody": "If data is processed outside Canada, we take steps appropriate to the risk, including contractual safeguards where applicable.",
+    "changesTitle": "Changes",
+    "changesBody": "We may update this policy. The “Last updated” date will change when we do."
+  },
+  "footer": {
+    "rights": "© {year} FAFCO. All rights reserved.",
+    "tagline": "Food & Feed Trading — international B2B supply.",
+    "companyTitle": "Company",
+    "productsTitle": "Products",
+    "regionsTitle": "Markets & regions",
+    "contactTitle": "Contact",
+    "contactLead": "Request a quote or discuss volumes and destinations."
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "locale": "Language"
+  }
+}

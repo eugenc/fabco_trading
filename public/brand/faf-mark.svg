@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FAF Trading">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a6b44"/>
+      <stop offset="100%" stop-color="#0d4a2e"/>
+    </linearGradient>
+  </defs>
+  <!-- Closed loop / cycle -->
+  <path fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round"
+        d="M48 20a20 20 0 1 0-32 24"/>
+  <path fill="none" stroke="#b8952e" stroke-width="4" stroke-linecap="round"
+        d="M16 44a20 20 0 0 0 32-24"/>
+  <!-- Leaf accent -->
+  <path fill="#2d8f5c" d="M34 18c-6 4-9 10-8 16 6-2 12-8 8-16z"/>
+  <circle cx="32" cy="32" r="3" fill="#f6f7f4" stroke="#1a6b44" stroke-width="1.5"/>
+</svg>

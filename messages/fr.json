@@ -1,0 +1,421 @@
+{
+  "meta": {
+    "title": "FAFCO — Aliments et alimentation animale | Produits agricoles",
+    "description": "Approvisionnement B2B en produits alimentaires, matières pour l’alimentation animale et produits agricoles. Canada, Europe et marchés mondiaux.",
+    "siteName": "FAFCO",
+    "pages": {
+      "products": {
+        "title": "Produits | FAFCO",
+        "description": "Gammes alimentaires, alimentation animale et produits d’export. Demandez un devis B2B adapté à vos volumes."
+      },
+      "about": {
+        "title": "À propos | FAFCO",
+        "description": "Commerce international B2B en produits alimentaires, aliments pour animaux et produits agricoles — approvisionnement fiable."
+      },
+      "contact": {
+        "title": "Contact et demande de devis | FAFCO",
+        "description": "Demandez un devis, un partenariat ou un soutien à l’approvisionnement. Confirmation par courriel et suivi par notre équipe."
+      },
+      "logistics": {
+        "title": "Logistique et chaîne d’approvisionnement | FAFCO",
+        "description": "Approvisionnement, contrôle qualité, consolidation et livraison — transport routier et maritime."
+      },
+      "privacy": {
+        "title": "Politique de confidentialité | FAFCO",
+        "description": "Comment FAFCO traite les renseignements personnels lors de l’utilisation de fafco.ca et des demandes de devis."
+      },
+      "import": {
+        "title": "Approvisionnement import | FAFCO",
+        "description": "Produits alimentaires et aliments pour animaux importés pour distributeurs et acheteurs industriels."
+      },
+      "export": {
+        "title": "Produits d’export | FAFCO",
+        "description": "Produits agricoles, bois et nutrition des cultures pour l’export — Canada et marchés internationaux."
+      },
+      "markets": {
+        "title": "Marchés et régions | FAFCO",
+        "description": "Zones d’activité : Canada, Europe, Europe de l’Est, Moyen-Orient, Asie, Amérique latine et États-Unis."
+      }
+    },
+    "categories": {
+      "food": {
+        "title": "Produits alimentaires | FAFCO",
+        "description": "Sucre, sel, riz, huiles, farine, céréales, conserves, miel, fruits, jus et plus — approvisionnement B2B."
+      },
+      "feed": {
+        "title": "Alimentation animale | FAFCO",
+        "description": "Gâteau de soja, tourteaux, céréales, mélanges sur mesure, huiles et matières grasses pour l’alimentation animale."
+      },
+      "export": {
+        "title": "Produits d’export | FAFCO",
+        "description": "Légumineuses, canola, houblon, bois, granulés, pâte à bois et engrais — Canada et marchés internationaux."
+      }
+    }
+  },
+  "nav": {
+    "brandName": "FAFCO",
+    "brandTagline": "Aliments et alimentation animale",
+    "home": "Accueil",
+    "about": "À propos",
+    "products": "Produits",
+    "import": "Import",
+    "export": "Export",
+    "logistics": "Logistique",
+    "markets": "Marchés",
+    "contact": "Contact",
+    "quoteCta": "Demander un devis",
+    "privacy": "Confidentialité",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "pageHero": {
+    "eyebrowHome": "FAFCO · Aliments et alimentation animale",
+    "eyebrowAbout": "À propos",
+    "eyebrowProducts": "Catalogue produits",
+    "eyebrowImport": "Import",
+    "eyebrowExport": "Export",
+    "eyebrowLogistics": "Logistique",
+    "eyebrowMarkets": "Marchés",
+    "eyebrowContact": "Contact",
+    "eyebrowPrivacy": "Juridique",
+    "imageAltAbout": "Équipe en réunion autour d’une table",
+    "imageAltContact": "Professionnels en réunion et partenariat",
+    "imageAltExport": "Fret aérien et logistique internationale",
+    "imageAltImport": "Conteneurs portuaires — logistique d’import",
+    "imageAltLogistics": "Camions et transport de marchandises",
+    "imageAltMarkets": "Paysage agricole — régions d’approvisionnement",
+    "imageAltProducts": "Produits agricoles et céréales en vrac",
+    "imageAltPrivacy": "Analyse d’affaires et conformité",
+    "imageAltCategoryFood": "Ingrédients alimentaires et produits pour l’approvisionnement B2B",
+    "imageAltCategoryFeed": "Aliments pour animaux et matières agricoles en vrac",
+    "imageAltCategoryExport": "Transport maritime et produits à l’export"
+  },
+  "home": {
+    "heroTitle": "Approvisionnement fiable en aliments, aliments pour animaux et produits agricoles",
+    "heroImageAlt": "Entrepôt logistique et marchandises — chaîne d’approvisionnement internationale",
+    "heroIntro": "Approvisionnement constant auprès de producteurs de confiance, avec logistique complète de l’origine à la destination. Présence au Canada, en Europe et en Europe de l’Est, partenariats au Moyen-Orient, en Asie, en Amérique latine et aux États-Unis.",
+    "specialize": "Nous sommes spécialisés dans l’approvisionnement B2B en produits alimentaires, matières pour l’alimentation animale et produits agricoles.",
+    "heroBullets": [
+      "Approvisionnement direct auprès des producteurs",
+      "Expéditions conteneurisées et en vrac",
+      "Conditions de livraison flexibles (FOB / CIF / EXW)",
+      "Expertise en logistique internationale"
+    ],
+    "productPreviewEyebrow": "Catalogue produits",
+    "advantagesEyebrow": "Pourquoi FAFCO",
+    "advantagesLead": "Ce que les acheteurs et partenaires gagnent en travaillant avec nous sur l’approvisionnement, la qualité et la logistique.",
+    "advantagesTitle": "Atouts clés",
+    "advantagesCards": [
+      {
+        "title": "Approvisionnement direct",
+        "subtitle": "Relations de confiance avec les producteurs et visibilité sur l’origine.",
+        "imageAlt": "Produits agricoles et matières en vrac à l’origine"
+      },
+      {
+        "title": "Qualité et conformité",
+        "subtitle": "Contrôles rigoureux et documentation alignée sur les normes internationales.",
+        "imageAlt": "Inspecteur en tenue de protection vérifiant des produits alimentaires en production"
+      },
+      {
+        "title": "Conditions de livraison flexibles",
+        "subtitle": "FOB, CIF, EXW et plus — adaptées à vos corridors et à votre profil de risque.",
+        "imageAlt": "Documentation commerciale et planification des livraisons"
+      },
+      {
+        "title": "Logistique internationale",
+        "subtitle": "Coordination des ports, transporteurs et corridors à l’échelle mondiale.",
+        "imageAlt": "Navire cargo et transport maritime de fret"
+      },
+      {
+        "title": "Conteneur et vrac",
+        "subtitle": "Expérience concrète des flux conteneurisés et des mouvements en vrac.",
+        "imageAlt": "Entrepôt logistique et conteneurs empilés"
+      },
+      {
+        "title": "Approvisionnement B2B sur mesure",
+        "subtitle": "Programmes adaptés à vos volumes, spécifications et échéances.",
+        "imageAlt": "Équipe commerciale pour la stratégie d’approvisionnement"
+      }
+    ],
+    "aboutPreviewTitle": "À propos de FAFCO",
+    "aboutPreviewBody": "Notre équipe s’appuie sur une expérience concrète en agriculture, logistique et commerce international — de la production et l’entreposage au transport et à la livraison finale.",
+    "aboutPreviewHighlights": [
+      "Agriculture et production",
+      "Logistique et entreposage",
+      "Commerce international B2B"
+    ],
+    "aboutPreviewImageAlt": "Camion FAFCO avec marquage devant un centre logistique et alimentaire",
+    "aboutPreviewImageCaption": "Flotte et infrastructures pour l’approvisionnement alimentaire et en alimentation animale.",
+    "aboutPreviewCta": "En savoir plus",
+    "productPreviewTitle": "Catégories de produits",
+    "productPreviewLead": "Approvisionnement structuré en aliments, aliments pour animaux et produits d’export — avec accompagnement pour vos demandes.",
+    "exploreCta": "Explorer",
+    "catFood": "Produits alimentaires",
+    "catFoodLead": "Sucre, sel, riz, huiles, céréales, conserves et plus.",
+    "catFoodImageAlt": "Ingrédients alimentaires et approvisionnement B2B",
+    "catFeed": "Alimentation animale",
+    "catFeedLead": "Gâteau de soja, tourteaux, céréales, mélanges et huiles pour l’alimentation animale.",
+    "catFeedImageAlt": "Céréales et matières pour l’alimentation animale",
+    "catExport": "Produits d’export",
+    "catExportLead": "Légumineuses, canola, houblon, bois, engrais et mélanges NPK.",
+    "catExportImageAlt": "Navire cargo en mer — logistique d’export international",
+    "splitEyebrow": "Programmes commerciaux",
+    "splitTitle": "Import et export",
+    "splitSectionLead": "Programmes d’import structurés pour l’alimentation et l’alimentation animale, et approvisionnement export pour l’agriculture, le bois et la nutrition des cultures.",
+    "splitImportTitle": "Approvisionnement import",
+    "splitImportBody": "Gammes alimentaires et aliments pour animaux pour supermarchés, distributeurs et industriels — avec flexibilité sur le conditionnement et la livraison.",
+    "splitImportImageAlt": "Entrepôt et palettes — approvisionnement entrant en aliments et aliments pour animaux",
+    "splitExportTitle": "Produits d’export",
+    "splitExportBody": "Approvisionnement canadien et international pour produits agricoles, bois et nutrition des cultures.",
+    "splitExportImageAlt": "Cargo maritime en mer — flux internationaux de produits d’export",
+    "splitImportCta": "Voir l’import",
+    "splitExportCta": "Voir l’export",
+    "logisticsEyebrow": "Chaîne logistique",
+    "logisticsSectionTitle": "De l’approvisionnement à la livraison finale",
+    "logisticsSectionLead": "Nous coordonnons l’approvisionnement, la qualité, la documentation, la consolidation, le transport et la livraison avec des partenaires de confiance.",
+    "logisticsLearnMoreCta": "En savoir plus sur les services logistiques FAFCO",
+    "logisticsStepCards": [
+      {
+        "title": "Approvisionnement",
+        "subtitle": "Fournisseurs qualifiés, spécifications et origine transparente."
+      },
+      {
+        "title": "Contrôle qualité",
+        "subtitle": "Inspections, documentation et conformité à vos exigences."
+      },
+      {
+        "title": "Entreposage / consolidation",
+        "subtitle": "Entreposage, mélanges et planification des chargements avec partenaires."
+      },
+      {
+        "title": "Transport",
+        "subtitle": "Coordination mer, rail et route de bout en bout."
+      },
+      {
+        "title": "Livraison",
+        "subtitle": "Remise à destination avec jalons clairs."
+      }
+    ],
+    "marketsEyebrow": "Notre présence",
+    "marketsTitle": "Marchés desservis",
+    "marketsLead": "Présence internationale et partenariats avec des acteurs clés dans plusieurs régions.",
+    "marketsRegionsLabel": "Régions couvertes",
+    "marketsMapImageAlt": "Carte du monde avec les principaux marchés FAFCO",
+    "marketsSeeCta": "Voir les marchés desservis par FAFCO",
+    "regions": [
+      "Canada",
+      "Europe",
+      "Europe de l’Est",
+      "Moyen-Orient",
+      "Asie",
+      "Amérique latine",
+      "États-Unis"
+    ],
+    "ctaEyebrow": "Prochaine étape",
+    "ctaTitle": "Vous cherchez un partenaire d’approvisionnement fiable ?",
+    "ctaBody": "Indiquez le produit, le volume et la destination souhaités — notre équipe préparera une solution adaptée à votre activité.",
+    "ctaButton": "Obtenir un devis sous 24 h",
+    "featuredEyebrow": "Portefeuille",
+    "featuredTitle": "Produits en vedette",
+    "featuredLead": "Catégories très demandées de notre portefeuille — demandez un devis adapté à vos volumes et spécifications.",
+    "ctaCatalog": "Voir les produits",
+    "ctaQuote": "Demander un devis"
+  },
+  "products": {
+    "title": "Produits",
+    "lead": "Découvrez les gammes alimentaires, alimentation animale et export. Choisissez une catégorie pour les groupes de produits et les options de demande.",
+    "food": "Produits alimentaires",
+    "feed": "Alimentation animale",
+    "export": "Produits d’export",
+    "requestQuote": "Demander un devis",
+    "viewCategory": "Voir la catégorie",
+    "catalogSearchLabel": "Rechercher des produits",
+    "catalogSearchPlaceholder": "Saisissez du texte pour filtrer — des suggestions apparaissent",
+    "filterCategory": "Catégorie",
+    "filterCategoryAll": "Toutes les catégories",
+    "filterGroup": "Groupe de produits",
+    "filterGroupAll": "Tous les groupes",
+    "clearFilters": "Réinitialiser les filtres",
+    "catalogNoResults": "Aucun produit ne correspond à vos critères. Ajustez la recherche ou les filtres.",
+    "cardViewProduct": "Voir le produit"
+  },
+  "productPage": {
+    "metaTitle": "{productName} | {categoryName} | FAFCO",
+    "metaDescription": "Demandez un devis B2B pour {productName} via FAFCO. Nous coordonnons les spécifications, la documentation et les conditions de livraison pour les acheteurs en {categoryName} et corridors associés.",
+    "breadcrumbProducts": "Produits",
+    "introLead": "{productName} — approvisionnement B2B via FAFCO. Nous accompagnons distributeurs, acheteurs industriels et équipes approvisionnement qui ont besoin de volumes fiables, de spécifications claires et d’une exécution rigoureuse.",
+    "body1": "Indiquez vos spécifications cibles, la destination et les conditions commerciales souhaitées. Notre équipe confirme la faisabilité, les options d’approvisionnement et la suite — y compris la documentation et l’alignement logistique si nécessaire.",
+    "body2": "Disponibilité, qualités et conditionnements peuvent varier selon la saison et le corridor. Nous structurons chaque demande autour de vos attentes qualité, Incoterms et fenêtre de livraison.",
+    "supplyTitle": "Approvisionnement et spécifications",
+    "supplyBody": "Nous alignons le périmètre produit, les paramètres qualité et le conditionnement avant devis. Lorsque plusieurs qualités ou origines sont possibles, nous proposons des options adaptées à votre marché.",
+    "logisticsTitle": "Logistique et conditions",
+    "logisticsBody": "Selon le corridor, nous accompagnons FOB, CIF, EXW et autres modalités commerciales pertinentes. Nous coordonnons la documentation et les points de transfert avec des partenaires logistiques validés.",
+    "formatsTitle": "Conditionnements / formats",
+    "ctaQuote": "Demander un devis",
+    "ctaContact": "Contactez-nous",
+    "backToCategory": "Retour à {categoryName}",
+    "heroAlt": "{productName} — {categoryName}"
+  },
+  "contact": {
+    "title": "Contact et demande de devis",
+    "lead": "Indiquez vos besoins, la destination et vos coordonnées. Nous confirmons par courriel et assurons le suivi.",
+    "sectionEyebrow": "Écrivez-nous",
+    "sectionHeadline": "Parlons de votre besoin",
+    "sectionSubheadline": "Remplissez le formulaire et nous vous confirmerons par courriel. Pour un contact plus rapide, utilisez le téléphone ou le courriel dans le panneau à droite.",
+    "inquiryType": "Comment pouvons-nous vous aider ?",
+    "inquiryHint": "Choisissez une option — vous pourrez préciser plus bas.",
+    "inquiryTypes": {
+      "quote": "Prix / devis",
+      "general": "Message général",
+      "sourcing": "Sourcing produit",
+      "partnership": "Partenariat"
+    },
+    "product": "Produit d’intérêt",
+    "productPlaceholder": "Choisir une ligne produit (facultatif)",
+    "productGeneral": "Général — sans produit précis",
+    "variation": "Conditionnement / format",
+    "variationPlaceholder": "Choisir le conditionnement",
+    "quantity": "Volume requis",
+    "unit": "Unité",
+    "units": {
+      "mt": "Tonnes métriques (TM)",
+      "kg": "Kilogrammes (kg)",
+      "pallets": "Palettes",
+      "containers": "Conteneurs (20′ / 40′)",
+      "units": "Unités"
+    },
+    "company": "Entreprise",
+    "name": "Nom complet",
+    "email": "Courriel",
+    "phone": "Téléphone",
+    "country": "Pays",
+    "message": "Message (facultatif)",
+    "submit": "Envoyer la demande",
+    "submitting": "Envoi en cours…",
+    "success": "Merci. Une confirmation a été envoyée à votre adresse courriel.",
+    "error": "Une erreur s’est produite. Réessayez ou écrivez-nous directement.",
+    "details": {
+      "sidebarTitle": "Coordonnées",
+      "phoneLabel": "Téléphone",
+      "phoneValue": "+1 (555) 012-3456",
+      "emailLabel": "Courriel",
+      "emailValue": "info@fafco.ca",
+      "addressLabel": "Adresse postale",
+      "addressValue": "FAFCO\nToronto (Ontario)\nCanada",
+      "locationsTitle": "Implantations",
+      "canadaTitle": "Canada",
+      "canadaBody": "Toronto (Ontario) — siège et coordination commerciale pour l’Amérique du Nord.",
+      "germanyTitle": "Allemagne",
+      "germanyBody": "Région de Francfort — opérations européennes et coordination avec les partenaires.",
+      "dubaiTitle": "Dubaï, ÉAU",
+      "dubaiBody": "Dubaï — présence au Moyen-Orient et partenariats régionaux."
+    }
+  },
+  "importPage": {
+    "title": "Approvisionnement import",
+    "intro": "Nous approvisionnons des acheteurs B2B en produits alimentaires et aliments pour animaux, avec des volumes fiables, une documentation adaptée et une coordination logistique.",
+    "foodTitle": "Import de produits alimentaires",
+    "foodBody": "Des ingrédients de base aux conserves et boissons — en lien avec les besoins de la distribution de gros et du détail.",
+    "feedTitle": "Import d’aliments pour animaux",
+    "feedBody": "Tourteaux protéiques, céréales, mélanges sur mesure et composants énergétiques pour l’élevage.",
+    "termsTitle": "Conditionnement et conditions de livraison",
+    "termsBody": "Conditionnement flexible selon disponibilité et conditions commerciales incluant FOB, CIF et EXW — selon corridor et préférence d’Incoterms.",
+    "logisticsTitle": "Soutien logistique",
+    "logisticsBody": "Nous coordonnons la consolidation, la documentation et le transport avec des partenaires logistiques internationaux validés.",
+    "cta": "Demander un devis"
+  },
+  "exportPage": {
+    "title": "Produits d’export",
+    "intro": "Produits orientés export depuis le Canada et les marchés internationaux — avec une attention à la documentation, à la conformité et à l’exécution des expéditions.",
+    "agTitle": "Produits agricoles de base",
+    "agBody": "Notamment huile de canola, lentilles, pois et gammes connexes selon saisonnalité et spécifications.",
+    "specialTitle": "Cultures spéciales",
+    "specialBody": "Notamment houblon et autres produits agricoles spécialisés.",
+    "woodTitle": "Produits industriels et bois",
+    "woodBody": "Bois de sciage, granulés, grumes et qualités de pâte à bois selon disponibilité marché.",
+    "fertTitle": "Engrais et nutrition des cultures",
+    "fertBody": "Engrais potassiques, azotés, phosphatés et mélanges NPK sur mesure selon sols et cultures.",
+    "complianceTitle": "Documentation et conformité",
+    "complianceBody": "Nous accompagnons les flux de contrôle qualité et de documentation conformes aux pratiques du commerce international.",
+    "cta": "Demander un devis"
+  },
+  "marketsPage": {
+    "title": "Marchés et régions",
+    "lead": "FAFCO est actif dans plusieurs régions avec un réseau croissant de producteurs, partenaires logistiques et acheteurs.",
+    "note": "Les corridors et disponibilités exactes dépendent du produit et de la saison — indiquez votre destination et nous confirmerons la faisabilité.",
+    "cta": "Parler de vos besoins par marché"
+  },
+  "about": {
+    "title": "À propos",
+    "lead": "Commerce international B2B en produits alimentaires, aliments pour animaux et produits agricoles — approvisionnement fiable.",
+    "body": "FAFCO est une société de commerce international B2B axée sur l’approvisionnement en produits alimentaires, matières pour l’alimentation animale et produits agricoles. Nous nous appuyons sur une expérience concrète en agriculture, logistique et commerce international. Nous maîtrisons toute la chaîne d’approvisionnement — de la production et l’entreposage au transport et à la livraison finale. Notre objectif est un approvisionnement fiable, des conditions transparentes et des partenariats durables. Nous travaillons avec des partenaires au Canada, en Europe et en Europe de l’Est, avec des solutions flexibles adaptées à chaque client.",
+    "missionTitle": "Mission et approche",
+    "missionBody": "Nous privilégions des conditions transparentes, une exécution rigoureuse et des relations de long terme — pas un simple échange ponctuel.",
+    "whyTitle": "Pourquoi travailler avec nous",
+    "whyBullets": [
+      "Expérience concrète du commerce et de la logistique",
+      "Communication claire sur les spécifications et la documentation",
+      "Volumes flexibles alignés sur la réalité commerciale",
+      "Vision partenariale pour la récurrence des approvisionnements"
+    ],
+    "cta": "Nous contacter"
+  },
+  "logistics": {
+    "title": "Logistique et chaîne d’approvisionnement",
+    "intro": "Nous assurons une gestion complète du cycle logistique :",
+    "bullets": [
+      "Approvisionnement direct auprès des producteurs",
+      "Contrôle qualité et documentation",
+      "Entreposage et consolidation des cargaisons",
+      "Transport (routier / maritime)",
+      "Livraison jusqu’à destination finale"
+    ],
+    "footer": "Nous collaborons avec des partenaires logistiques internationaux fiables et assurons la transparence à chaque étape du processus d’approvisionnement.",
+    "incotermsTitle": "Incoterms flexibles",
+    "incotermsBody": "Nous travaillons avec FOB, CIF, EXW et d’autres modalités selon le corridor, le produit et le préférence de l’acheteur."
+  },
+  "supply": {
+    "title": "Capacités d’approvisionnement",
+    "bullets": [
+      "Solutions sur mesure pour chaque client",
+      "Approvisionnement contractuel",
+      "Volumes flexibles",
+      "Approvisionnement selon les besoins du client",
+      "Possibilités de partenariats à long terme"
+    ]
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "updated": "Dernière mise à jour : mars 2026",
+    "intro": "FAFCO (« nous ») respecte votre vie privée. La présente politique décrit comment nous recueillons, utilisons et divulguons les renseignements personnels lorsque vous utilisez fafco.ca (le « Site ») et demandez un devis, conformément au droit canadien applicable en matière de protection des renseignements personnels, y compris la Loi sur la protection des renseignements personnels et les documents électroniques (LPRPDE) lorsqu’elle s’applique.",
+    "contactTitle": "Qui sommes-nous",
+    "contactBody": "Pour toute question sur cette politique ou sur vos renseignements personnels, contactez-nous à l’adresse courriel indiquée sur notre site.",
+    "collectTitle": "Ce que nous recueillons",
+    "collectBody": "Nous pouvons recueillir les coordonnées que vous fournissez (nom, entreprise, courriel, téléphone), le contenu des messages et les détails des produits ou volumes demandés. Nous recueillons aussi des données techniques telles que l’adresse IP, le type de navigateur et les pages consultées, via notre hébergement et nos outils d’analyse.",
+    "useTitle": "Utilisation des renseignements",
+    "useBody": "Nous utilisons ces renseignements pour répondre aux demandes de devis, exploiter et améliorer le Site, communiquer avec vous, respecter la loi et protéger nos intérêts commerciaux légitimes.",
+    "shareTitle": "Partage",
+    "shareBody": "Nous ne vendons pas vos renseignements personnels. Nous pouvons les partager avec des fournisseurs de services (p. ex. envoi de courriels, hébergement) qui nous assistent contractuellement, et lorsque la loi l’exige.",
+    "retentionTitle": "Conservation",
+    "retentionBody": "Nous conservons les renseignements aussi longtemps que nécessaire aux fins ci-dessus et comme l’exige la loi.",
+    "rightsTitle": "Vos choix",
+    "rightsBody": "Selon le droit applicable, vous pouvez demander l’accès à vos renseignements personnels ou leur correction. Nous répondrons dans un délai raisonnable.",
+    "intlTitle": "Transferts internationaux",
+    "intlBody": "Si des données sont traitées hors du Canada, nous prenons des mesures adaptées au risque, y compris des garanties contractuelles le cas échéant.",
+    "changesTitle": "Modifications",
+    "changesBody": "Nous pouvons mettre à jour cette politique. La date de « Dernière mise à jour » sera modifiée en conséquence."
+  },
+  "footer": {
+    "rights": "© {year} FAFCO. Tous droits réservés.",
+    "tagline": "Aliments et alimentation animale — approvisionnement B2B international.",
+    "companyTitle": "Entreprise",
+    "productsTitle": "Produits",
+    "regionsTitle": "Marchés et régions",
+    "contactTitle": "Contact",
+    "contactLead": "Demandez un devis ou parlez volumes et destinations."
+  },
+  "common": {
+    "learnMore": "En savoir plus",
+    "locale": "Langue"
+  }
+}
