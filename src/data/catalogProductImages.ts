@@ -88,9 +88,19 @@ const LOCAL_FOOD_PACKSHOTS: Record<string, string> = {
     "/brand/catalog/food-juices-drinks-protein-drinks.png",
 };
 
+const LOCAL_FEED_PACKSHOTS: Record<string, string> = {
+  "feed-custom-blends-custom-feed-blends":
+    "/brand/catalog/feed-custom-blends-custom-feed-blends.png",
+  "feed-feed-oils-fats-animal-fat-tallow":
+    "/brand/catalog/feed-feed-oils-fats-animal-fat-tallow.png",
+  "feed-sunflower-meal-sunflower-meal-cake":
+    "/brand/catalog/feed-sunflower-meal-sunflower-meal-cake.png",
+};
+
 const OVERRIDES: Record<string, string> = {
   ...FEATURED_PRODUCT_IMAGE_SRCS,
   ...LOCAL_FOOD_PACKSHOTS,
+  ...LOCAL_FEED_PACKSHOTS,
 };
 
 function stablePoolIndex(id: string, poolLength: number): number {
