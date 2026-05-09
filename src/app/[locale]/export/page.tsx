@@ -1,8 +1,10 @@
 import { PageHero } from "@/components/PageHero";
+import { ServiceSection } from "@/components/services/ServiceSection";
 import { PAGE_HERO_STOCK_SRC } from "@/data/pageHeroStock";
+import { SERVICE_SECTION_IMAGES } from "@/data/serviceSectionImages";
 import { Link } from "@/i18n/navigation";
 import { buildPageMetadata } from "@/lib/metadata";
-import { getTranslations } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -24,14 +26,54 @@ export async function generateMetadata({
 export default async function ExportPage() {
   const t = await getTranslations("exportPage");
   const h = await getTranslations("pageHero");
+  const messages = await getMessages();
+  const exportMessages = messages.exportPage as Record<string, unknown>;
+  const featuresFor = (key: string) =>
+    (exportMessages[key] as string[] | undefined) ?? [];
 
   const sections = [
-    ["agTitle", "agBody"],
-    ["specialTitle", "specialBody"],
-    ["woodTitle", "woodBody"],
-    ["fertTitle", "fertBody"],
-    ["complianceTitle", "complianceBody"],
-  ] as const;
+    {
+      key: "ag",
+      title: t("agTitle"),
+      body: t("agBody"),
+      features: featuresFor("agFeatures"),
+      image: { src: SERVICE_SECTION_IMAGES.export.ag, alt: t("agImageAlt") },
+    },
+    {
+      key: "special",
+      title: t("specialTitle"),
+      body: t("specialBody"),
+      features: featuresFor("specialFeatures"),
+      image: {
+        src: SERVICE_SECTION_IMAGES.export.special,
+        alt: t("specialImageAlt"),
+      },
+    },
+    {
+      key: "wood",
+      title: t("woodTitle"),
+      body: t("woodBody"),
+      features: featuresFor("woodFeatures"),
+      image: { src: SERVICE_SECTION_IMAGES.export.wood, alt: t("woodImageAlt") },
+    },
+    {
+      key: "fert",
+      title: t("fertTitle"),
+      body: t("fertBody"),
+      features: featuresFor("fertFeatures"),
+      image: { src: SERVICE_SECTION_IMAGES.export.fert, alt: t("fertImageAlt") },
+    },
+    {
+      key: "compliance",
+      title: t("complianceTitle"),
+      body: t("complianceBody"),
+      features: featuresFor("complianceFeatures"),
+      image: {
+        src: SERVICE_SECTION_IMAGES.export.compliance,
+        alt: t("complianceImageAlt"),
+      },
+    },
+  ];
 
   return (
     <>
@@ -41,15 +83,18 @@ export default async function ExportPage() {
         description={t("intro")}
         image={{ src: PAGE_HERO_STOCK_SRC.export, alt: h("imageAltExport") }}
       />
-      <div className="mx-auto max-w-3xl px-4 py-12">
-        {sections.map(([titleKey, bodyKey]) => (
-          <section key={titleKey} className="mt-12 first:mt-0">
-            <h2 className="text-xl font-semibold text-[var(--faf-ink)]">
-              {t(titleKey)}
-            </h2>
-            <p className="mt-3 text-[var(--faf-ink-muted)]">{t(bodyKey)}</p>
-          </section>
-        ))}
+      <div className="faf-container py-12 md:py-16">
+        <div className="space-y-12 md:space-y-16">
+          {sections.map((s) => (
+            <ServiceSection
+              key={s.key}
+              title={s.title}
+              body={s.body}
+              features={s.features}
+              image={s.image}
+            />
+          ))}
+        </div>
 
         <Link
           href="/contact"

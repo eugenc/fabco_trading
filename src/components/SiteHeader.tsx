@@ -3,16 +3,35 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { MobileNav } from "./MobileNav";
+import { ServicesNavDesktop } from "./ServicesNav";
 
 export async function SiteHeader() {
   const t = await getTranslations("nav");
 
-  const links = [
+  const serviceItems = [
+    {
+      href: "/import",
+      label: t("import"),
+      description: t("serviceImportBlurb"),
+    },
+    {
+      href: "/export",
+      label: t("export"),
+      description: t("serviceExportBlurb"),
+    },
+    {
+      href: "/logistics",
+      label: t("logistics"),
+      description: t("serviceLogisticsBlurb"),
+    },
+  ] as const;
+
+  const linksBeforeServices = [
     { href: "/", label: t("home") },
     { href: "/products", label: t("products") },
-    { href: "/import", label: t("import") },
-    { href: "/export", label: t("export") },
-    { href: "/logistics", label: t("logistics") },
+  ] as const;
+
+  const linksAfterServices = [
     { href: "/markets", label: t("markets") },
     { href: "/about", label: t("about") },
     { href: "/contact", label: t("contact") },
@@ -23,7 +42,7 @@ export async function SiteHeader() {
       <div className="faf-container flex flex-wrap items-center justify-between gap-3 py-3 md:gap-4 md:py-4">
         <Link
           href="/"
-          className="group flex min-w-0 shrink-0 items-center gap-2.5 md:gap-3"
+          className="group flex min-w-0 flex-1 items-center gap-2.5 md:max-w-none md:flex-none md:gap-3"
           aria-label={`${t("brandName")} — ${t("home")}`}
         >
           <Image
@@ -34,8 +53,8 @@ export async function SiteHeader() {
             className="h-12 w-12 shrink-0 object-contain sm:h-14 sm:w-14"
             priority
           />
-          <span className="flex min-w-0 flex-col leading-none">
-            <span className="text-lg font-bold tracking-tight text-[var(--faf-ink)] md:text-xl">
+          <span className="flex min-w-0 flex-1 flex-col leading-none">
+            <span className="truncate text-lg font-bold tracking-tight text-[var(--faf-ink)] md:text-xl">
               {t("brandName")}
             </span>
             <span className="mt-0.5 truncate text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--faf-ink-muted)] sm:text-[11px]">
@@ -48,7 +67,24 @@ export async function SiteHeader() {
           className="order-3 hidden w-full flex-wrap items-center justify-center gap-x-0.5 gap-y-1 text-sm font-medium md:order-none md:flex md:w-auto md:flex-1 md:justify-center lg:gap-x-1"
           aria-label="Primary"
         >
-          {links.map((l) => (
+          {linksBeforeServices.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="rounded-md px-2 py-2 text-[var(--faf-ink)] transition hover:bg-[var(--faf-bg)] hover:text-[var(--faf-green)] lg:px-2.5"
+            >
+              {l.label}
+            </Link>
+          ))}
+          <ServicesNavDesktop
+            label={t("services")}
+            megaEyebrow={t("servicesMegaEyebrow")}
+            megaTitle={t("servicesMegaTitle")}
+            megaLead={t("servicesMegaLead")}
+            quoteCta={t("quoteCta")}
+            items={[...serviceItems]}
+          />
+          {linksAfterServices.map((l) => (
             <Link
               key={l.href}
               href={l.href}

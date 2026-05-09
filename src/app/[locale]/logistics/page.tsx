@@ -1,5 +1,7 @@
 import { PageHero } from "@/components/PageHero";
+import { ServiceSection } from "@/components/services/ServiceSection";
 import { PAGE_HERO_STOCK_SRC } from "@/data/pageHeroStock";
+import { SERVICE_SECTION_IMAGES } from "@/data/serviceSectionImages";
 import { Link } from "@/i18n/navigation";
 import { buildPageMetadata } from "@/lib/metadata";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
@@ -27,9 +29,50 @@ export default async function LogisticsPage() {
   const h = await getTranslations("pageHero");
   const meta = await getTranslations({ locale, namespace: "meta" });
   const s = await getTranslations("supply");
+  const importT = await getTranslations("importPage");
   const messages = await getMessages();
-  const logisticsBullets = messages.logistics.bullets as string[];
-  const supplyBullets = messages.supply.bullets as string[];
+  const logisticsMessages = messages.logistics as Record<string, unknown>;
+  const supplyMessages = messages.supply as Record<string, unknown>;
+
+  const cycleFeatures =
+    (logisticsMessages.cycleFeatures as string[] | undefined) ?? [];
+  const incotermsFeatures =
+    (logisticsMessages.incotermsFeatures as string[] | undefined) ?? [];
+  const supplyFeatures =
+    (supplyMessages.features as string[] | undefined) ?? [];
+
+  const sections = [
+    {
+      key: "cycle",
+      title: t("title"),
+      body: t("cycleBody"),
+      features: cycleFeatures,
+      image: {
+        src: SERVICE_SECTION_IMAGES.logistics.cycle,
+        alt: t("cycleImageAlt"),
+      },
+    },
+    {
+      key: "incoterms",
+      title: t("incotermsTitle"),
+      body: t("incotermsBody"),
+      features: incotermsFeatures,
+      image: {
+        src: SERVICE_SECTION_IMAGES.logistics.incoterms,
+        alt: t("incotermsImageAlt"),
+      },
+    },
+    {
+      key: "supply",
+      title: s("title"),
+      body: s("body"),
+      features: supplyFeatures,
+      image: {
+        src: SERVICE_SECTION_IMAGES.logistics.supply,
+        alt: s("imageAlt"),
+      },
+    },
+  ];
 
   return (
     <>
@@ -37,46 +80,33 @@ export default async function LogisticsPage() {
         eyebrow={h("eyebrowLogistics")}
         title={t("title")}
         description={meta("pages.logistics.description")}
-        image={{ src: PAGE_HERO_STOCK_SRC.logistics, alt: h("imageAltLogistics") }}
+        image={{
+          src: PAGE_HERO_STOCK_SRC.logistics,
+          alt: h("imageAltLogistics"),
+        }}
       />
-      <div className="mx-auto max-w-3xl px-4 py-12">
-        <p className="font-medium text-[var(--faf-ink)]">{t("intro")}</p>
-        <ul className="mt-6 space-y-3">
-          {logisticsBullets.map((line) => (
-            <li key={line} className="flex gap-3 text-[var(--faf-ink-muted)]">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--faf-green)]" />
-              {line}
-            </li>
+      <div className="faf-container py-12 md:py-16">
+        <div className="space-y-12 md:space-y-16">
+          {sections.map((section) => (
+            <ServiceSection
+              key={section.key}
+              title={section.title}
+              body={section.body}
+              features={section.features}
+              image={section.image}
+            />
           ))}
-        </ul>
-        <p className="mt-8 text-[var(--faf-ink-muted)]">{t("footer")}</p>
+        </div>
 
-        <section className="mt-12 rounded-2xl border border-[var(--faf-deep-blue)]/15 bg-[var(--faf-bg)] p-6">
-          <h2 className="text-lg font-semibold text-[var(--faf-deep-blue)]">
-            {t("incotermsTitle")}
-          </h2>
-          <p className="mt-2 text-sm leading-relaxed text-[var(--faf-ink-muted)]">
-            {t("incotermsBody")}
-          </p>
-        </section>
-
-        <h2 className="mt-16 text-2xl font-bold text-[var(--faf-ink)]">
-          {s("title")}
-        </h2>
-        <ul className="mt-6 space-y-3">
-          {supplyBullets.map((line) => (
-            <li key={line} className="flex gap-3 text-[var(--faf-ink-muted)]">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--faf-orange)]" />
-              {line}
-            </li>
-          ))}
-        </ul>
+        <p className="mt-12 max-w-3xl text-[var(--faf-ink-muted)]">
+          {t("footer")}
+        </p>
 
         <Link
           href="/contact"
-          className="mt-12 inline-flex rounded-lg bg-[var(--faf-cta)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--faf-cta-hover)]"
+          className="mt-8 inline-flex rounded-lg bg-[var(--faf-cta)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--faf-cta-hover)]"
         >
-          {(await getTranslations("importPage"))("cta")}
+          {importT("cta")}
         </Link>
       </div>
     </>

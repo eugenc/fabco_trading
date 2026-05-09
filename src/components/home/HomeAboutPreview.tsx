@@ -115,9 +115,6 @@ export async function HomeAboutPreview() {
               aria-hidden
             />
           </div>
-          <p className="mt-3 text-center text-xs text-[var(--faf-ink-muted)] lg:text-left">
-            {t("aboutPreviewImageCaption")}
-          </p>
         </div>
       </div>
     </section>

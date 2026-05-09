@@ -110,15 +110,17 @@ function packGroupsIntoRows(groups: GroupBlock[]): GroupBlock[][] {
 }
 
 function productSubgridClass(itemCount: number): string {
-  if (itemCount <= 1) return "grid grid-cols-1 gap-4";
-  if (itemCount === 2) return "grid grid-cols-1 gap-4 sm:grid-cols-2";
+  if (itemCount <= 1)
+    return "grid grid-cols-3 gap-2 sm:grid-cols-1 sm:gap-4";
+  /* Mobile: 3 columns; sm+ restores roomier layouts up to lg */
+  if (itemCount === 2) return "grid grid-cols-3 gap-2 sm:gap-4 sm:grid-cols-2";
   if (itemCount === 3) {
-    return "grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3";
+    return "grid grid-cols-3 gap-2 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3";
   }
   if (itemCount === 4) {
-    return "grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4";
+    return "grid grid-cols-3 gap-2 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4";
   }
-  return "grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4";
+  return "grid grid-cols-3 gap-2 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4";
 }
 
 function groupColSpanClass(itemCount: number): string {
@@ -129,11 +131,26 @@ function groupColSpanClass(itemCount: number): string {
   return "lg:col-span-4";
 }
 
-export function ProductsCatalogClient({ locale }: { locale: Locale }) {
+export function ProductsCatalogClient({
+  locale,
+  initialCategory,
+}: {
+  locale: Locale;
+  /** When set (e.g. from `?category=food`), pre-selects the category filter. */
+  initialCategory?: string;
+}) {
   const t = useTranslations("products");
   const searchId = useId();
+  const validatedInitialCategory =
+    initialCategory &&
+    CATEGORIES.some((c) => c.slug === initialCategory)
+      ? initialCategory
+      : "all";
+
   const [searchQuery, setSearchQuery] = useState("");
-  const [categoryFilter, setCategoryFilter] = useState<string>("all");
+  const [categoryFilter, setCategoryFilter] = useState<string>(
+    validatedInitialCategory
+  );
   const [groupFilter, setGroupFilter] = useState<string>("all");
   const [suggestOpen, setSuggestOpen] = useState(false);
   const [activeSuggest, setActiveSuggest] = useState(-1);
@@ -160,6 +177,16 @@ export function ProductsCatalogClient({ locale }: { locale: Locale }) {
     const ok = groupOptions.some((o) => o.groupId === groupFilter);
     if (!ok) setGroupFilter("all");
   }, [categoryFilter, groupFilter, groupOptions]);
+
+  useEffect(() => {
+    const next =
+      initialCategory &&
+      CATEGORIES.some((c) => c.slug === initialCategory)
+        ? initialCategory
+        : "all";
+    setCategoryFilter(next);
+    setGroupFilter("all");
+  }, [initialCategory]);
 
   const visibleItems = useMemo(() => {
     return QUOTEABLE_ITEMS.filter((item) => {
@@ -414,10 +441,10 @@ export function ProductsCatalogClient({ locale }: { locale: Locale }) {
                             <li key={item.id} className="min-w-0">
                               <Link
                                 href={`/products/${item.categorySlug}/${quoteItemToPageSlug(item)}`}
-                                className="group relative block overflow-hidden rounded-2xl border border-[var(--faf-divider)] bg-[var(--faf-navy)] shadow-md ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--faf-brand)]"
+                                className="group relative block overflow-hidden rounded-lg border border-[var(--faf-divider)] bg-[var(--faf-navy)] shadow-md ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--faf-brand)] sm:rounded-2xl"
                                 aria-label={`${item.lineLabel[locale]} — ${item.categoryName[locale]}`}
                               >
-                                <div className="relative aspect-[3/4] w-full overflow-hidden sm:aspect-[4/5]">
+                                <div className="relative aspect-square w-full overflow-hidden sm:aspect-[3/4] lg:aspect-square">
                                   <Image
                                     src={getCatalogProductImageSrc(
                                       item.id,
@@ -425,22 +452,27 @@ export function ProductsCatalogClient({ locale }: { locale: Locale }) {
                                     )}
                                     alt=""
                                     fill
-                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                    sizes="(max-width: 640px) 34vw, (max-width: 1024px) 50vw, 25vw"
                                     className="object-cover transition duration-500 ease-out group-hover:scale-[1.05]"
                                   />
                                   <div
                                     className="absolute inset-0 bg-gradient-to-t from-[var(--faf-navy)]/95 via-[var(--faf-navy)]/40 to-[var(--faf-navy)]/15"
                                     aria-hidden
                                   />
-                                  <div className="absolute inset-x-0 bottom-0 z-[1] flex flex-col p-4 md:p-5">
-                                    <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8fd97f]">
+                                  <div className="absolute inset-x-0 bottom-0 z-[1] flex flex-col p-1.5 sm:p-4 md:p-5">
+                                    <p className="line-clamp-2 text-[7px] font-bold uppercase leading-tight tracking-wide text-[#8fd97f] sm:text-[11px] sm:tracking-[0.18em]">
                                       {item.categoryName[locale]}
                                     </p>
-                                    <p className="mt-2 text-base font-bold leading-snug text-white md:text-lg">
+                                    <p className="mt-1 line-clamp-2 text-[11px] font-bold leading-snug text-white sm:mt-2 sm:text-base md:text-lg">
                                       {item.lineLabel[locale]}
                                     </p>
-                                    <p className="mt-3 text-sm font-semibold text-[#8fd97f]">
-                                      {t("cardViewProduct")} →
+                                    <p className="mt-1 text-[9px] font-semibold leading-tight text-[#8fd97f] sm:mt-3 sm:text-sm">
+                                      <span className="sm:hidden" aria-hidden>
+                                        →
+                                      </span>
+                                      <span className="hidden sm:inline">
+                                        {t("cardViewProduct")} →
+                                      </span>
                                     </p>
                                   </div>
                                 </div>

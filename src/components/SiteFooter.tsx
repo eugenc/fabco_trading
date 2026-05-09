@@ -72,17 +72,17 @@ export async function SiteFooter() {
               </Link>
             </li>
             <li>
-              <Link href="/products/food" className={linkClass}>
+              <Link href="/products?category=food" className={linkClass}>
                 {home("catFood")}
               </Link>
             </li>
             <li>
-              <Link href="/products/feed" className={linkClass}>
+              <Link href="/products?category=feed" className={linkClass}>
                 {home("catFeed")}
               </Link>
             </li>
             <li>
-              <Link href="/products/export" className={linkClass}>
+              <Link href="/products?category=export" className={linkClass}>
                 {home("catExport")}
               </Link>
             </li>

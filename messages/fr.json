@@ -58,6 +58,7 @@
     "home": "Accueil",
     "about": "À propos",
     "products": "Produits",
+    "services": "Services",
     "import": "Import",
     "export": "Export",
     "logistics": "Logistique",
@@ -66,7 +67,13 @@
     "quoteCta": "Demander un devis",
     "privacy": "Confidentialité",
     "openMenu": "Ouvrir le menu",
-    "closeMenu": "Fermer le menu"
+    "closeMenu": "Fermer le menu",
+    "servicesMegaEyebrow": "Commerce et chaîne d’approvisionnement",
+    "servicesMegaTitle": "Des services pour les acheteurs B2B",
+    "servicesMegaLead": "Programmes d’import, produits à l’export et logistique coordonnée — un partenaire de l’origine à la livraison.",
+    "serviceImportBlurb": "Import de produits alimentaires et aliments pour animaux pour distributeurs et industriels, avec conditions et logistique adaptées.",
+    "serviceExportBlurb": "Produits agricoles, bois et nutrition des cultures orientés export — Canada et origines partenaires.",
+    "serviceLogisticsBlurb": "De l’approvisionnement au contrôle qualité, en passant par la consolidation et la livraison — route et mer."
   },
   "pageHero": {
     "eyebrowHome": "FAFCO · Aliments et alimentation animale",
@@ -145,7 +152,6 @@
       "Commerce international B2B"
     ],
     "aboutPreviewImageAlt": "Camion FAFCO avec marquage devant un centre logistique et alimentaire",
-    "aboutPreviewImageCaption": "Flotte et infrastructures pour l’approvisionnement alimentaire et en alimentation animale.",
     "aboutPreviewCta": "En savoir plus",
     "productPreviewTitle": "Catégories de produits",
     "productPreviewLead": "Approvisionnement structuré en aliments, aliments pour animaux et produits d’export — avec accompagnement pour vos demandes.",
@@ -251,8 +257,10 @@
     "logisticsTitle": "Logistique et conditions",
     "logisticsBody": "Selon le corridor, nous accompagnons FOB, CIF, EXW et autres modalités commerciales pertinentes. Nous coordonnons la documentation et les points de transfert avec des partenaires logistiques validés.",
     "formatsTitle": "Conditionnements / formats",
+    "countryOfOriginTitle": "Pays d’origine",
     "ctaQuote": "Demander un devis",
     "ctaContact": "Contactez-nous",
+    "similarProductsTitle": "Produits similaires",
     "backToCategory": "Retour à {categoryName}",
     "heroAlt": "{productName} — {categoryName}"
   },
@@ -316,12 +324,36 @@
     "intro": "Nous approvisionnons des acheteurs B2B en produits alimentaires et aliments pour animaux, avec des volumes fiables, une documentation adaptée et une coordination logistique.",
     "foodTitle": "Import de produits alimentaires",
     "foodBody": "Des ingrédients de base aux conserves et boissons — en lien avec les besoins de la distribution de gros et du détail.",
+    "foodImageAlt": "Ingrédients alimentaires variés et produits d’épicerie pour l’approvisionnement B2B",
+    "foodFeatures": [
+      "Ingrédients de base et secs",
+      "Conserves et boissons",
+      "Distribution gros et détail"
+    ],
     "feedTitle": "Import d’aliments pour animaux",
     "feedBody": "Tourteaux protéiques, céréales, mélanges sur mesure et composants énergétiques pour l’élevage.",
+    "feedImageAlt": "Céréales en vrac et tourteaux protéiques pour l’alimentation animale",
+    "feedFeatures": [
+      "Tourteaux protéiques",
+      "Céréales et composants énergétiques",
+      "Mélanges sur mesure"
+    ],
     "termsTitle": "Conditionnement et conditions de livraison",
     "termsBody": "Conditionnement flexible selon disponibilité et conditions commerciales incluant FOB, CIF et EXW — selon corridor et préférence d’Incoterms.",
+    "termsImageAlt": "Palettes empilées et marchandises emballées dans un entrepôt logistique",
+    "termsFeatures": [
+      "Conditionnement flexible",
+      "Conditions FOB · CIF · EXW",
+      "Adapté au corridor"
+    ],
     "logisticsTitle": "Soutien logistique",
     "logisticsBody": "Nous coordonnons la consolidation, la documentation et le transport avec des partenaires logistiques internationaux validés.",
+    "logisticsImageAlt": "Conteneurs maritimes et manutention de fret pour le commerce international",
+    "logisticsFeatures": [
+      "Consolidation de cargaisons",
+      "Documentation commerciale",
+      "Partenaires logistiques validés"
+    ],
     "cta": "Demander un devis"
   },
   "exportPage": {
@@ -329,21 +361,59 @@
     "intro": "Produits orientés export depuis le Canada et les marchés internationaux — avec une attention à la documentation, à la conformité et à l’exécution des expéditions.",
     "agTitle": "Produits agricoles de base",
     "agBody": "Notamment huile de canola, lentilles, pois et gammes connexes selon saisonnalité et spécifications.",
+    "agImageAlt": "Champs agricoles à la récolte — canola et légumineuses",
+    "agFeatures": [
+      "Huile de canola, lentilles",
+      "Pois et gammes connexes",
+      "Spécifications saisonnières"
+    ],
     "specialTitle": "Cultures spéciales",
     "specialBody": "Notamment houblon et autres produits agricoles spécialisés.",
+    "specialImageAlt": "Cultures agricoles spécialisées en pleine croissance",
+    "specialFeatures": [
+      "Approvisionnement en houblon",
+      "Cultures spécialisées",
+      "Programmes par origine"
+    ],
     "woodTitle": "Produits industriels et bois",
     "woodBody": "Bois de sciage, granulés, grumes et qualités de pâte à bois selon disponibilité marché.",
+    "woodImageAlt": "Bois de sciage empilé dans une scierie",
+    "woodFeatures": [
+      "Bois de sciage, grumes, granulés",
+      "Qualités de pâte à bois",
+      "Selon disponibilité marché"
+    ],
     "fertTitle": "Engrais et nutrition des cultures",
     "fertBody": "Engrais potassiques, azotés, phosphatés et mélanges NPK sur mesure selon sols et cultures.",
+    "fertImageAlt": "Engrais granulaires et produits de nutrition des cultures",
+    "fertFeatures": [
+      "Potasse · azote · phosphate",
+      "Mélanges NPK sur mesure",
+      "Adapté aux sols et cultures"
+    ],
     "complianceTitle": "Documentation et conformité",
     "complianceBody": "Nous accompagnons les flux de contrôle qualité et de documentation conformes aux pratiques du commerce international.",
+    "complianceImageAlt": "Documents de conformité et analyses sur un bureau de commerce international",
+    "complianceFeatures": [
+      "Flux de contrôle qualité",
+      "Documentation commerciale",
+      "Normes internationales"
+    ],
     "cta": "Demander un devis"
   },
   "marketsPage": {
     "title": "Marchés et régions",
     "lead": "FAFCO est actif dans plusieurs régions avec un réseau croissant de producteurs, partenaires logistiques et acheteurs.",
     "note": "Les corridors et disponibilités exactes dépendent du produit et de la saison — indiquez votre destination et nous confirmerons la faisabilité.",
-    "cta": "Parler de vos besoins par marché"
+    "cta": "Parler de vos besoins par marché",
+    "sourcingEyebrow": "Approvisionnement par région",
+    "sourcingTitle": "Découvrez nos sources par région",
+    "sourcingHint": "Sélectionnez une région pour voir les produits que nous importons actuellement.",
+    "regionProductsTitle": "Produits importés de {region}",
+    "regionProductsEmpty": "Aucun produit n’est associé à cette région pour le moment. Indiquez-nous ce que vous cherchez et nous évaluerons la faisabilité.",
+    "regionSourcingFrom": "Origines : {countries}",
+    "viewProduct": "Voir le produit",
+    "clearSelection": "Tout afficher"
   },
   "about": {
     "title": "À propos",
@@ -370,9 +440,22 @@
       "Transport (routier / maritime)",
       "Livraison jusqu’à destination finale"
     ],
+    "cycleBody": "Coordination de bout en bout, de l’origine à la destination — sourcing, contrôle qualité, entreposage, transport et livraison finale gérés comme un seul flux.",
+    "cycleImageAlt": "Camions et opérations d’entrepôt — chaîne d’approvisionnement complète",
+    "cycleFeatures": [
+      "Sourcing direct producteurs",
+      "Entreposage et consolidation",
+      "Transport routier et maritime"
+    ],
     "footer": "Nous collaborons avec des partenaires logistiques internationaux fiables et assurons la transparence à chaque étape du processus d’approvisionnement.",
     "incotermsTitle": "Incoterms flexibles",
-    "incotermsBody": "Nous travaillons avec FOB, CIF, EXW et d’autres modalités selon le corridor, le produit et le préférence de l’acheteur."
+    "incotermsBody": "Nous travaillons avec FOB, CIF, EXW et d’autres modalités selon le corridor, le produit et le préférence de l’acheteur.",
+    "incotermsImageAlt": "Grue chargeant des conteneurs maritimes dans un port international",
+    "incotermsFeatures": [
+      "FOB — chargement origine",
+      "CIF — port destination",
+      "EXW — départ usine"
+    ]
   },
   "supply": {
     "title": "Capacités d’approvisionnement",
@@ -382,6 +465,13 @@
       "Volumes flexibles",
       "Approvisionnement selon les besoins du client",
       "Possibilités de partenariats à long terme"
+    ],
+    "body": "Programmes structurés selon vos spécifications et volumes — conçus pour un approvisionnement récurrent, pas pour des transactions ponctuelles.",
+    "imageAlt": "Équipe d’affaires coordonnant des partenariats d’approvisionnement à long terme",
+    "features": [
+      "Programmes sur mesure",
+      "Approvisionnement contractuel",
+      "Partenariats long terme"
     ]
   },
   "privacy": {

@@ -1,8 +1,10 @@
 import { PageHero } from "@/components/PageHero";
+import { ServiceSection } from "@/components/services/ServiceSection";
 import { PAGE_HERO_STOCK_SRC } from "@/data/pageHeroStock";
+import { SERVICE_SECTION_IMAGES } from "@/data/serviceSectionImages";
 import { Link } from "@/i18n/navigation";
 import { buildPageMetadata } from "@/lib/metadata";
-import { getTranslations } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -24,6 +26,43 @@ export async function generateMetadata({
 export default async function ImportPage() {
   const t = await getTranslations("importPage");
   const h = await getTranslations("pageHero");
+  const messages = await getMessages();
+  const importMessages = messages.importPage as Record<string, unknown>;
+  const featuresFor = (key: string) =>
+    (importMessages[key] as string[] | undefined) ?? [];
+
+  const sections = [
+    {
+      title: t("foodTitle"),
+      body: t("foodBody"),
+      features: featuresFor("foodFeatures"),
+      image: { src: SERVICE_SECTION_IMAGES.import.food, alt: t("foodImageAlt") },
+    },
+    {
+      title: t("feedTitle"),
+      body: t("feedBody"),
+      features: featuresFor("feedFeatures"),
+      image: { src: SERVICE_SECTION_IMAGES.import.feed, alt: t("feedImageAlt") },
+    },
+    {
+      title: t("termsTitle"),
+      body: t("termsBody"),
+      features: featuresFor("termsFeatures"),
+      image: {
+        src: SERVICE_SECTION_IMAGES.import.terms,
+        alt: t("termsImageAlt"),
+      },
+    },
+    {
+      title: t("logisticsTitle"),
+      body: t("logisticsBody"),
+      features: featuresFor("logisticsFeatures"),
+      image: {
+        src: SERVICE_SECTION_IMAGES.import.logisticsSupport,
+        alt: t("logisticsImageAlt"),
+      },
+    },
+  ];
 
   return (
     <>
@@ -33,34 +72,18 @@ export default async function ImportPage() {
         description={t("intro")}
         image={{ src: PAGE_HERO_STOCK_SRC.import, alt: h("imageAltImport") }}
       />
-      <div className="mx-auto max-w-3xl px-4 py-12">
-        <section className="mt-0">
-          <h2 className="text-xl font-semibold text-[var(--faf-ink)]">
-            {t("foodTitle")}
-          </h2>
-          <p className="mt-3 text-[var(--faf-ink-muted)]">{t("foodBody")}</p>
-        </section>
-
-        <section className="mt-10">
-          <h2 className="text-xl font-semibold text-[var(--faf-ink)]">
-            {t("feedTitle")}
-          </h2>
-          <p className="mt-3 text-[var(--faf-ink-muted)]">{t("feedBody")}</p>
-        </section>
-
-        <section className="mt-10">
-          <h2 className="text-xl font-semibold text-[var(--faf-ink)]">
-            {t("termsTitle")}
-          </h2>
-          <p className="mt-3 text-[var(--faf-ink-muted)]">{t("termsBody")}</p>
-        </section>
-
-        <section className="mt-10">
-          <h2 className="text-xl font-semibold text-[var(--faf-ink)]">
-            {t("logisticsTitle")}
-          </h2>
-          <p className="mt-3 text-[var(--faf-ink-muted)]">{t("logisticsBody")}</p>
-        </section>
+      <div className="faf-container py-12 md:py-16">
+        <div className="space-y-12 md:space-y-16">
+          {sections.map((s) => (
+            <ServiceSection
+              key={s.title}
+              title={s.title}
+              body={s.body}
+              features={s.features}
+              image={s.image}
+            />
+          ))}
+        </div>
 
         <Link
           href="/contact"

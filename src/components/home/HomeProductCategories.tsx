@@ -9,21 +9,21 @@ export async function HomeProductCategories() {
 
   const cards = [
     {
-      href: "/products/food" as const,
+      href: "/products?category=food" as const,
       title: t("catFood"),
       lead: t("catFoodLead"),
       imageAlt: t("catFoodImageAlt"),
       imageIndex: 0,
     },
     {
-      href: "/products/feed" as const,
+      href: "/products?category=feed" as const,
       title: t("catFeed"),
       lead: t("catFeedLead"),
       imageAlt: t("catFeedImageAlt"),
       imageIndex: 1,
     },
     {
-      href: "/products/export" as const,
+      href: "/products?category=export" as const,
       title: t("catExport"),
       lead: t("catExportLead"),
       imageAlt: t("catExportImageAlt"),

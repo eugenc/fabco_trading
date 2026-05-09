@@ -1,0 +1,47 @@
+category_id,category_slug,category_name_en,quote_as_single_product,product_line_en,variation_id,variation_label_en,Country of origin,Product_type_en
+food,food,Food Products,no,Sugar,sugar - 1kg,1 kg,"Poland, Ukraine",white sugar
+food,food,Food Products,yes,Salt,salt-1kg,1 kg,Brazil,for human
+food,food,Food Products,yes,Salt,salt-25kg,25 kg,Brazil,"for human, for animals, for industrial"
+food,food,Food Products,no,Rice,"rice - 1kg, 5kg","1kg, 5kg","Bangladesh, Thailand",Bangladesh- long grain rice (white rice) Thailand - jasmine rice
+food,food,Food Products,no,Sunflower Oil,1 litr bottle,1 litr,Ukraine,Refined sunflower oil
+food,food,Food Products,no,Soybean Oil,5 litr bottle + bulk,5 litr bottle + bulk (IBC tank),"Ukraine, Brazil","Refined soybean oil (Ukraine), Crude soybean oil - Ukraine + Brazil"
+food,food,Food Products,no,Olive Oil,1 litr (glass bottle),1 litr,Greece,Extra virgin olive oil
+food,food,Food Products,no,Wheat Flour,1 kg,1 kg,Ukraine,Grade Wheat Flour
+food,food,Food Products,no,Rusks & Dry Bread,"250g, 500g","250g, 500g",Ukraine,Import the types https://kyivkhlib.ua/en/
+food,food,Food Products,no,Bakery Products,,,Ukraine,Import the types https://kyivkhlib.ua/en/
+food,food,Food Products,no,Buckwheat,1kg,1kg,Ukraine,roasted buckwheat groats
+food,food,Food Products,no,Pearl Barley,1kg,1kg,Ukraine,
+food,food,Food Products,no,Other Cereals (On Request),"500g, 1kg","500g, 1kg","Ukraine, Poland",выбрать любые виды 2-3
+food,food,Food Products,no,Pickled Cucumbers,720ml - 1 litr,720ml-1 litr (glass jars),"Ukraine, Poland",whole pickled cucumbers
+food,food,Food Products,no,Canned Tomatoes,"400g, 720ml - 1 litr","400g, 720ml-1 litr (glass jars)","Ukraine, Poland","peeled tomatoes, chopped tomatoes, tomato paste"
+food,food,Food Products,no,"Vegetable Mixes & Appetizers (Lecho, Salads, Spreads)","350g, 500g, 720ml","350g, 500g, 720ml","Ukraine, Bulgaria","lecho, vegetable salads, ajvar, zucchini spread"
+food,food,Food Products,no,Natural Honey,"250g, 500g","250g, 500g",Ukraine,"wildflower honey, acacia honey"
+food,food,Food Products,no,Fruit Jams & Preserves,"350g, 500g","350g, 500g","Ukraine, Poland","strawberry, apricot, cherry, rasberry, plum"
+food,food,Food Products,no,"Nuts (Almonds, Hazelnuts, Mixes)","200g, 500g","200g, 500g","Ukraine, Turkey, Georgia","almonds, hazelnuts, walnut kernels, mixed nuts"
+food,food,Food Products,no,Bananas,18kg - banana box,18kg - banana box,"Ecuador, Colombia",cavendish bananas
+food,food,Food Products,no,Oranges,15kg - oranges box,15kg - oranges box,"Spain, Turkey, Morocco","valencia, navel oranges"
+food,food,Food Products,no,Mandarins / Clementines,10kg - box,10kg - box,"Spain, Turkey, Morocco","mandarins, clementines"
+food,food,Food Products,no,Seasonal Fruits (On Request),"250g, 500g, 1-3 kg","250g, 500g, 1-3 kg","Mexico, USA, Costa Rica","berries, melons, mangoes, peaches, grapes"
+food,food,Food Products,no,Fruit Juices,"1litr, 2 litr","1litr, 2 litr","Ukraine, Poland, Bulgaria","tomato, multivitamin, pomegranate, pulm, grapes"
+food,food,Food Products,no,Carbonated Drinks,"330ml, 500ml - cans","330ml, 500ml",Poland,private label carbonated drinks
+food,food,Food Products,no,Vitamin / Functional Drinks,"330ml, 500ml - cans","330ml, 500ml",Poland,"vitamin water, energy drinks"
+food,food,Food Products,no,Protein Drinks,"330ml, 500ml - PET bottles","330ml, 500ml","Poland, USA","whey protein shakes, fitness beverages, lactose-free protein"
+feed,feed,Feed Products,no,Soybean Cake (Meal),"50kg - bags, 1t - Big bags","50kg, 1 t.","Ukraine, Brazil","cake - Ukraine, meal - Brazil"
+feed,feed,Feed Products,no,Sunflower Meal (Cake),"50kg - bags, 1t - Big bags","50kg, 1 t.",Ukraine,"cake, meal"
+feed,feed,Feed Products,no,Animal Feed,"50kg - bags, 1t - Big bags","50kg, 1 t.",Ukraine,"soybean meal (cake) - based feed pellets for poultry, cattke, swine"
+feed,feed,Feed Products,no,Custom Feed Blends,"50kg - bags, 1t - Big bags","50kg, 1 t.",Ukraine,soybean meal(cake) - based feed pellets - custom blends
+feed,feed,Feed Products,no,Animal Fat (Tallow),"bulk, 1000l IBC tank",1000l,"Ukraine, Azerbaijan","feed grade, biodiesel grade tallow"
+feed,feed,Feed Products,no,Poultry Fat,"bulk, 1000l IBC tank",1000l,"Ukraine, Poland, Azerbaijan","feed grade, biodiesel feedstok"
+feed,feed,Feed Products,no,Vegetable Oils,"1l, 5l, 20l, bulk","1l, 5l, 20l","Ukraine, Canada, Brazil","mix oils (sunflower oil, soybean oil, rapeseed oil, corn oil)"
+export,export,Export Products,no,Canola Oil,"16 litr, 1000l - IBC tank","16litr, 1000litr",Canada,refined canola oil
+export,export,Export Products,no,Lentils,"1kg, 25kg, bulk","1kg, 25kg, bulk",Canada,"red lentils, green lentils"
+export,export,Export Products,no,Peas,"1kg, 25kg, bulk","1kg, 25kg, bulk",Canada,"yellow peas, green peas, feed peas"
+export,export,Export Products,no,Hops,"5kg, 25kg box","5kg vaccum packs, 25kg carton box ",Canada,"whole cone hops, hop pellets"
+export,export,Export Products,no,Lumber,"2 x 4, 2 x 6, custom size",bundled lumber packs,Canada,"spruce, pine, kiln-dried construction lumber"
+export,export,Export Products,no,Wood Pellets,"15-25kg, 1t. - big bag","15-25kg, 1t. - big bag",Canada,"heating pellets, industrial biomass pellets"
+export,export,Export Products,no,Logs,"bulk, custom lengths and diameters",,Canada,"pine logs, spruce logs, hardwood logs"
+export,export,Export Products,no,Wood Pulp (BSKP / BHKP),"bulk, palletized bales",,Canada,"bleached softwood kraft pulp, bleached hardwood kraft pulp , for paper and packaging industry"
+export,export,Export Products,no,Potash Fertilizers,"50kg, 1t. - big bag, bulk","50kg, 1t. - big bag, bulk",Canada,"MOP (muriate of potash), potassium fertilizers"
+export,export,Export Products,no,Nitrogen Fertilizers,"50kg, 1t. big bag, bulk","50kg, 1t. big bag, bulk","Canada, Middle East","urea, ammonium nitrate, UAN solution"
+export,export,Export Products,no,Phosphate Fertilizers,"50kg, 1t. big bag, bulk","50kg, 1t. big bag, bulk","Morocco, Middle East","MAP (Monoammonium Phosphate), DAP (Diammonium Phosphate)"
+export,export,Export Products,no,Compound Fertilizers (Custom NPK Blends),"50kg, 1t. big bag","50kg, 1t. big bag","Canada, Poland, Morocco","NPK blends, water-soluble fertilizers, custom formulations"

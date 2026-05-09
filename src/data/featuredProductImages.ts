@@ -10,8 +10,7 @@ export const FEATURED_PRODUCT_IMAGE_SRCS: Record<
 > = {
   "feed-soybean-cake-soybean-cake":
     "https://images.unsplash.com/photo-1543244550-7d81da8f3d2e?auto=format&fit=crop&w=1200&q=80",
-  "food-salt":
-    "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1200&q=80",
+  "food-salt": "/brand/catalog/food-salt.png",
   "export-ag-commodities-canola-oil":
     "https://images.unsplash.com/photo-1557351711-ac957cfa45dd?auto=format&fit=crop&w=1200&q=80",
 };

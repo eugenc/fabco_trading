@@ -41,8 +41,56 @@ const EXPORT_POOL = [
   "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80",
 ] as const;
 
+const LOCAL_FOOD_PACKSHOTS: Record<string, string> = {
+  "food-sugar-sugar": "/brand/catalog/food-sugar-sugar.png",
+  "food-salt": "/brand/catalog/food-salt.png",
+  "food-rice-rice": "/brand/catalog/food-rice-rice.png",
+  "food-oils-sunflower-oil": "/brand/catalog/food-oils-sunflower-oil.png",
+  "food-oils-soybean-oil": "/brand/catalog/food-oils-soybean-oil.png",
+  "food-oils-olive-oil": "/brand/catalog/food-oils-olive-oil.png",
+  "food-grains-cereals-buckwheat": "/brand/catalog/food-grains-cereals-buckwheat.png",
+  "food-grains-cereals-pearl-barley":
+    "/brand/catalog/food-grains-cereals-pearl-barley.png",
+  "food-grains-cereals-other-cereals-on-request":
+    "/brand/catalog/food-grains-cereals-other-cereals-on-request.png",
+  "food-flour-bakery-wheat-flour": "/brand/catalog/food-flour-bakery-wheat-flour.png",
+  "food-flour-bakery-rusks-dry-bread":
+    "/brand/catalog/food-flour-bakery-rusks-dry-bread.png",
+  "food-flour-bakery-bakery-products":
+    "/brand/catalog/food-flour-bakery-bakery-products.png",
+  "food-canned-pickled-cucumbers":
+    "/brand/catalog/food-canned-pickled-cucumbers.png",
+  "food-canned-canned-tomatoes":
+    "/brand/catalog/food-canned-canned-tomatoes.png",
+  "food-canned-vegetable-mixes-appetizers-lecho-salads-spreads":
+    "/brand/catalog/food-canned-vegetable-mixes-appetizers-lecho-salads-spreads.png",
+  "food-honey-jams-nuts-natural-honey":
+    "/brand/catalog/food-honey-jams-nuts-natural-honey.png",
+  "food-honey-jams-nuts-fruit-jams-preserves":
+    "/brand/catalog/food-honey-jams-nuts-fruit-jams-preserves.png",
+  "food-honey-jams-nuts-nuts-almonds-hazelnuts-mixes":
+    "/brand/catalog/food-honey-jams-nuts-nuts-almonds-hazelnuts-mixes.png",
+  "food-fresh-fruits-bananas":
+    "/brand/catalog/food-fresh-fruits-bananas.png",
+  "food-fresh-fruits-oranges":
+    "/brand/catalog/food-fresh-fruits-oranges.png",
+  "food-fresh-fruits-mandarins-clementines":
+    "/brand/catalog/food-fresh-fruits-mandarins-clementines.png",
+  "food-fresh-fruits-seasonal-fruits-on-request":
+    "/brand/catalog/food-fresh-fruits-seasonal-fruits-on-request.png",
+  "food-juices-drinks-fruit-juices":
+    "/brand/catalog/food-juices-drinks-fruit-juices.png",
+  "food-juices-drinks-carbonated-drinks":
+    "/brand/catalog/food-juices-drinks-carbonated-drinks.png",
+  "food-juices-drinks-vitamin-functional-drinks":
+    "/brand/catalog/food-juices-drinks-vitamin-functional-drinks.png",
+  "food-juices-drinks-protein-drinks":
+    "/brand/catalog/food-juices-drinks-protein-drinks.png",
+};
+
 const OVERRIDES: Record<string, string> = {
   ...FEATURED_PRODUCT_IMAGE_SRCS,
+  ...LOCAL_FOOD_PACKSHOTS,
 };
 
 function stablePoolIndex(id: string, poolLength: number): number {

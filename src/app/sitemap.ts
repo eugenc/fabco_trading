@@ -3,12 +3,9 @@ import { routing } from "@/i18n/routing";
 import { getAllProductPageParams } from "@/lib/product-pages";
 import type { MetadataRoute } from "next";
 
-const categories = ["food", "feed", "export"] as const;
-
 const staticPathsWithoutLocale = [
   "",
   "/products",
-  ...categories.map((c) => `/products/${c}`),
   "/about",
   "/contact",
   "/import",
