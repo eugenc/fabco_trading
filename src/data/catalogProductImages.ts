@@ -91,16 +91,64 @@ const LOCAL_FOOD_PACKSHOTS: Record<string, string> = {
 const LOCAL_FEED_PACKSHOTS: Record<string, string> = {
   "feed-custom-blends-custom-feed-blends":
     "/brand/catalog/feed-custom-blends-custom-feed-blends.png",
+  "feed-feed-grains-feed-grains":
+    "/brand/catalog/feed-feed-grains-feed-grains.png",
   "feed-feed-oils-fats-animal-fat-tallow":
     "/brand/catalog/feed-feed-oils-fats-animal-fat-tallow.png",
+  "feed-feed-oils-fats-poultry-fat":
+    "/brand/catalog/feed-feed-oils-fats-poultry-fat.png",
+  "feed-feed-oils-fats-vegetable-oils":
+    "/brand/catalog/feed-feed-oils-fats-vegetable-oils.png",
   "feed-sunflower-meal-sunflower-meal-cake":
     "/brand/catalog/feed-sunflower-meal-sunflower-meal-cake.png",
 };
+
+const LOCAL_EXPORT_PACKSHOTS: Record<string, string> = {
+  "export-ag-commodities-lentils":
+    "/brand/catalog/export-ag-commodities-lentils.png",
+  "export-ag-commodities-peas":
+    "/brand/catalog/export-ag-commodities-peas.png",
+  "export-special-crops-hops":
+    "/brand/catalog/export-special-crops-hops.png",
+  "export-fertilizers-potash-fertilizers":
+    "/brand/catalog/export-fertilizers-potash-fertilizers.png",
+  "export-fertilizers-nitrogen-fertilizers":
+    "/brand/catalog/export-fertilizers-nitrogen-fertilizers.png",
+  "export-fertilizers-phosphate-fertilizers":
+    "/brand/catalog/export-fertilizers-phosphate-fertilizers.png",
+  "export-fertilizers-compound-fertilizers-custom-npk-blends":
+    "/brand/catalog/export-fertilizers-compound-fertilizers-custom-npk-blends.png",
+  "export-wood-lumber": "/brand/catalog/export-wood-lumber.png",
+  "export-wood-wood-pellets":
+    "/brand/catalog/export-wood-wood-pellets.png",
+  "export-wood-logs": "/brand/catalog/export-wood-logs.png",
+  "export-wood-wood-pulp-bskp-bhkp":
+    "/brand/catalog/export-wood-wood-pulp-bskp-bhkp.png",
+};
+
+/** Industrial & Wood on `/export` — same asset as catalog slug `export-wood-lumber`. */
+export const EXPORT_WOOD_SECTION_IMAGE_SRC =
+  LOCAL_EXPORT_PACKSHOTS["export-wood-lumber"]!;
+
+/** Special Crops on `/export` — same asset as catalog slug `export-special-crops-hops`. */
+export const EXPORT_SPECIAL_CROPS_SECTION_IMAGE_SRC =
+  LOCAL_EXPORT_PACKSHOTS["export-special-crops-hops"]!;
+
+/** Agricultural Commodities on `/export` — canola oil (featured slug `export-ag-commodities-canola-oil`). */
+export const EXPORT_AG_COMMODITIES_SECTION_IMAGE_SRC =
+  FEATURED_PRODUCT_IMAGE_SRCS["export-ag-commodities-canola-oil"]!;
+
+/** Fertilizers & Crop Nutrition on `/export` — catalog compound NPK blends packshot. */
+export const EXPORT_FERTILIZERS_SECTION_IMAGE_SRC =
+  LOCAL_EXPORT_PACKSHOTS[
+    "export-fertilizers-compound-fertilizers-custom-npk-blends"
+  ]!;
 
 const OVERRIDES: Record<string, string> = {
   ...FEATURED_PRODUCT_IMAGE_SRCS,
   ...LOCAL_FOOD_PACKSHOTS,
   ...LOCAL_FEED_PACKSHOTS,
+  ...LOCAL_EXPORT_PACKSHOTS,
 };
 
 function stablePoolIndex(id: string, poolLength: number): number {

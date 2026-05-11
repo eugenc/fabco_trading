@@ -1,6 +1,8 @@
 import { WorldMapWithBadges } from "@/components/WorldMapWithBadges";
 import { SectionHeading } from "@/components/home/SectionHeading";
 import { Link } from "@/i18n/navigation";
+import type { RegionCode } from "@/lib/markets-regions";
+import { MARKET_REGIONS, marketsPageHref } from "@/lib/markets-regions";
 import { getMessages, getTranslations } from "next-intl/server";
 
 function RegionChipIcon() {
@@ -20,8 +22,14 @@ function RegionChipIcon() {
 
 export async function HomeMarkets() {
   const t = await getTranslations("home");
+  const tMarkets = await getTranslations("marketsPage");
   const messages = await getMessages();
   const regions = messages.home.regions as string[];
+
+  const localizedRegionLabel = (code: RegionCode) => {
+    const def = MARKET_REGIONS.find((r) => r.code === code);
+    return def != null ? (regions[def.labelIndex] ?? code) : code;
+  };
 
   return (
     <section className="relative overflow-hidden border-t border-[var(--faf-divider)] bg-gradient-to-b from-[var(--faf-card)] via-[var(--faf-bg)] to-[var(--faf-card)] py-16 md:py-24">
@@ -45,6 +53,12 @@ export async function HomeMarkets() {
                 compact
                 fillHeight
                 className="min-h-0 flex-1 lg:min-h-0"
+                markerHref={marketsPageHref}
+                markerLinkAriaLabel={(code) =>
+                  tMarkets("mapMarkerLinkAria", {
+                    region: localizedRegionLabel(code),
+                  })
+                }
               />
             </div>
           </div>
@@ -55,14 +69,25 @@ export async function HomeMarkets() {
               {t("marketsRegionsLabel")}
             </p>
             <ul className="mt-4 grid min-h-0 flex-1 grid-cols-1 gap-3 sm:grid-cols-2 sm:auto-rows-[minmax(0,1fr)] lg:min-h-0">
-              {regions.map((r) => (
-                <li key={r} className="min-h-0">
-                  <div className="flex h-full min-h-[3.25rem] items-center gap-3 rounded-xl border border-[var(--faf-divider)] bg-[var(--faf-card)] px-4 py-3 shadow-sm transition hover:-translate-y-0.5 hover:border-[var(--faf-green)]/40 hover:shadow-md">
-                    <RegionChipIcon />
-                    <span className="text-sm font-semibold leading-snug text-[var(--faf-ink)]">{r}</span>
-                  </div>
-                </li>
-              ))}
+              {MARKET_REGIONS.map((def) => {
+                const label = regions[def.labelIndex] ?? def.code;
+                return (
+                  <li key={def.code} className="min-h-0">
+                    <Link
+                      href={marketsPageHref(def.code)}
+                      aria-label={tMarkets("mapMarkerLinkAria", {
+                        region: label,
+                      })}
+                      className="flex h-full min-h-[3.25rem] items-center gap-3 rounded-xl border border-[var(--faf-divider)] bg-[var(--faf-card)] px-4 py-3 shadow-sm transition hover:-translate-y-0.5 hover:border-[var(--faf-green)]/40 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--faf-brand)]"
+                    >
+                      <RegionChipIcon />
+                      <span className="text-sm font-semibold leading-snug text-[var(--faf-ink)]">
+                        {label}
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

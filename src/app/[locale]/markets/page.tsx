@@ -7,15 +7,25 @@ import {
 import { getCatalogProductImageSrc } from "@/data/catalogProductImages";
 import { PAGE_HERO_STOCK_SRC } from "@/data/pageHeroStock";
 import { Link } from "@/i18n/navigation";
+import type { RegionCode } from "@/lib/markets-regions";
 import {
   MARKET_REGIONS,
   buildProductsByRegion,
+  marketsPageHref,
   matchedOriginsForRegion,
 } from "@/lib/markets-regions";
 import { buildPageMetadata } from "@/lib/metadata";
 import { quoteItemToPageSlug } from "@/lib/product-pages";
 import type { Metadata } from "next";
 import { getMessages, getTranslations } from "next-intl/server";
+
+function firstQueryValue(
+  v: string | string[] | undefined
+): string | undefined {
+  if (typeof v === "string") return v;
+  if (Array.isArray(v) && v[0]) return v[0];
+  return undefined;
+}
 
 export async function generateMetadata({
   params,
@@ -35,11 +45,23 @@ export async function generateMetadata({
 
 export default async function MarketsPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams?: Promise<{ region?: string | string[] }>;
 }) {
   const { locale: rawLocale } = await params;
   const locale: "en" | "fr" = rawLocale === "fr" ? "fr" : "en";
+
+  const sp = searchParams ? await searchParams : {};
+  const regionParam = firstQueryValue(sp.region);
+  const regionCodes = new Set<RegionCode>(
+    MARKET_REGIONS.map((r) => r.code)
+  );
+  const initialSelectedCode: RegionCode =
+    regionParam && regionCodes.has(regionParam as RegionCode)
+      ? (regionParam as RegionCode)
+      : "CA";
 
   const t = await getTranslations("marketsPage");
   const tHome = await getTranslations("home");
@@ -87,12 +109,22 @@ export default async function MarketsPage({
           <WorldMapWithBadges
             mapAlt={tHome("marketsMapImageAlt")}
             className="w-full max-w-none"
+            markerHref={marketsPageHref}
+            markerLinkAriaLabel={(code) => {
+              const def = MARKET_REGIONS.find((r) => r.code === code);
+              const label =
+                def != null ? (regionLabels[def.labelIndex] ?? code) : code;
+              return t("mapMarkerLinkAria", { region: label });
+            }}
           />
         </div>
       </div>
 
       <div className="mx-auto max-w-5xl px-4">
-        <MarketsRegionsExplorer regions={regionViews} />
+        <MarketsRegionsExplorer
+          regions={regionViews}
+          initialSelectedCode={initialSelectedCode}
+        />
       </div>
 
       <div className="mx-auto max-w-3xl px-4 pb-12">

@@ -1,11 +1,18 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
 
+import { Link } from "@/i18n/navigation";
+import type { RegionCode } from "@/lib/markets-regions";
+
 /**
  * Hub markers on an equirectangular world map (lon −180…180°, lat −90…90°).
  * Positions are approximate geographic centers for each corridor label.
  */
-const REGION_MARKERS = [
+const REGION_MARKERS: ReadonlyArray<{
+  code: RegionCode;
+  lon: number;
+  lat: number;
+}> = [
   { code: "CA", lon: -96, lat: 56 },
   { code: "US", lon: -98, lat: 39 },
   { code: "EU", lon: 12, lat: 50 },
@@ -13,7 +20,7 @@ const REGION_MARKERS = [
   { code: "ME", lon: 47, lat: 30 },
   { code: "AS", lon: 105, lat: 32 },
   { code: "LATAM", lon: -68, lat: -12 },
-] as const;
+];
 
 function lonLatToStyle(lon: number, lat: number): CSSProperties {
   const leftPct = ((lon + 180) / 360) * 100;
@@ -44,6 +51,10 @@ type WorldMapWithBadgesProps = {
   compact?: boolean;
   /** Fill parent height (e.g. stretched column); omit aspect ratio */
   fillHeight?: boolean;
+  /** When set, each hub badge links to this href (e.g. `/markets?region=CA`). */
+  markerHref?: (code: RegionCode) => string;
+  /** Accessible name for marker links — provide when using `markerHref`. */
+  markerLinkAriaLabel?: (code: RegionCode) => string;
 };
 
 export function WorldMapWithBadges({
@@ -51,6 +62,8 @@ export function WorldMapWithBadges({
   className = "",
   compact = false,
   fillHeight = false,
+  markerHref,
+  markerLinkAriaLabel,
 }: WorldMapWithBadgesProps) {
   const sizeClass = fillHeight
     ? "h-full min-h-[200px] w-full"
@@ -72,17 +85,32 @@ export function WorldMapWithBadges({
         }
         priority={false}
       />
-      {REGION_MARKERS.map((m) => (
-        <div
-          key={m.code}
-          className="absolute z-10 -translate-x-1/2 -translate-y-1/2"
-          style={lonLatToStyle(m.lon, m.lat)}
-        >
+      {REGION_MARKERS.map((m) => {
+        const badge = (
           <span className={markerBadgeClass(m.code, compact)} title={m.code}>
             {m.code}
           </span>
-        </div>
-      ))}
+        );
+        return (
+          <div
+            key={m.code}
+            className="absolute z-10 -translate-x-1/2 -translate-y-1/2"
+            style={lonLatToStyle(m.lon, m.lat)}
+          >
+            {markerHref ? (
+              <Link
+                href={markerHref(m.code)}
+                aria-label={markerLinkAriaLabel?.(m.code) ?? m.code}
+                className="block rounded-full outline-offset-2 transition hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--faf-brand)]"
+              >
+                {badge}
+              </Link>
+            ) : (
+              badge
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }

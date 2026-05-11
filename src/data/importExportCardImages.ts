@@ -1,8 +1,8 @@
 /**
- * Home "Import & export" split cards — order: import, export.
- * Import: warehouse / inbound logistics. Export: maritime freight.
+ * Home services split cards — order: import, export, logistics.
  */
 export const IMPORT_EXPORT_IMAGE_SRCS = [
-  "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1200&q=80",
+  "/brand/services-import.png",
+  "/brand/services-export.png",
+  "/brand/services-logistics.png",
 ] as const;

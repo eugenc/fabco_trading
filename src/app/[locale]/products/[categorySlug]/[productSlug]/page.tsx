@@ -1,8 +1,12 @@
 import { QUOTEABLE_ITEMS, getCategoryBySlug } from "@/lib/catalog";
+import { getCountryOriginRows } from "@/lib/country-of-origin-display";
 import { getCatalogProductImageSrc } from "@/data/catalogProductImages";
+import { getSiteUrl, toAbsoluteUrl } from "@/lib/env";
 import { Link } from "@/i18n/navigation";
-import { getSiteUrl } from "@/lib/env";
-import { buildPageMetadata } from "@/lib/metadata";
+import {
+  absolutePageUrl,
+  buildPageMetadata,
+} from "@/lib/metadata";
 import {
   contactHrefForProduct,
   contactHrefProductOnly,
@@ -88,11 +92,9 @@ export default async function ProductPage({ params }: Props) {
         }))
       : [];
 
-  const country = item.countryOfOrigin
-    ? locale === "fr"
-      ? item.countryOfOrigin.fr
-      : item.countryOfOrigin.en
-    : null;
+  const originRows = item.countryOfOrigin
+    ? getCountryOriginRows(item.countryOfOrigin, locale)
+    : [];
 
   const sameGroup = QUOTEABLE_ITEMS.filter(
     (q) =>
@@ -107,8 +109,64 @@ export default async function ProductPage({ params }: Props) {
           (q) => q.id !== item.id && q.categorySlug === item.categorySlug
         ).slice(0, 4);
 
+  const pathWithoutLocale = `/products/${categorySlug}/${productSlug}`;
+  const productUrl = absolutePageUrl(locale, pathWithoutLocale);
+  const productsIndexUrl = absolutePageUrl(locale, "/products");
+  const categoryListUrl = absolutePageUrl(
+    locale,
+    `/products?category=${encodeURIComponent(categorySlug)}`
+  );
+  const structuredDescription = t("metaDescription", {
+    productName,
+    categoryName,
+  });
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${productUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: t("breadcrumbProducts"),
+            item: productsIndexUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: categoryName,
+            item: categoryListUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: productName,
+            item: productUrl,
+          },
+        ],
+      },
+      {
+        "@type": "Product",
+        "@id": `${productUrl}#product`,
+        name: productName,
+        description: structuredDescription,
+        image: [toAbsoluteUrl(imageSrc)],
+        category: categoryName,
+        brand: { "@type": "Brand", name: "FAFCO" },
+        url: productUrl,
+      },
+    ],
+  };
+
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
       <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-6 lg:gap-8">
         <div className="relative aspect-square w-full max-w-[min(100%,22rem)] shrink-0 overflow-hidden rounded-2xl border border-black/5 bg-[var(--faf-card)] shadow-sm sm:max-w-[min(100%,24rem)]">
           <Image
@@ -147,12 +205,44 @@ export default async function ProductPage({ params }: Props) {
             {productName}
           </h1>
 
-          {country ? (
+          {originRows.length > 0 ? (
             <div className="mt-6">
               <p className="text-xs font-semibold uppercase tracking-wide text-[var(--faf-ink-muted)]">
                 {t("countryOfOriginTitle")}
               </p>
-              <p className="mt-1 text-sm text-[var(--faf-ink)]">{country}</p>
+              {originRows.length === 1 ? (
+                <p className="mt-1 flex items-center gap-2 text-sm text-[var(--faf-ink)]">
+                  {originRows[0]!.flagEmoji ? (
+                    <span
+                      className="text-lg leading-none"
+                      aria-hidden
+                      title={originRows[0]!.label}
+                    >
+                      {originRows[0]!.flagEmoji}
+                    </span>
+                  ) : null}
+                  <span>{originRows[0]!.label}</span>
+                </p>
+              ) : (
+                <ul className="mt-2 list-none space-y-2 pl-0 text-sm text-[var(--faf-ink)]">
+                  {originRows.map((row, idx) => (
+                    <li key={idx} className="flex items-center gap-2">
+                      {row.flagEmoji ? (
+                        <span
+                          className="text-lg leading-none"
+                          aria-hidden
+                          title={row.label}
+                        >
+                          {row.flagEmoji}
+                        </span>
+                      ) : (
+                        <span className="w-6 shrink-0" aria-hidden />
+                      )}
+                      <span>{row.label}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ) : null}
 
@@ -237,7 +327,7 @@ export default async function ProductPage({ params }: Props) {
                   <div className="relative aspect-square w-full overflow-hidden">
                     <Image
                       src={getCatalogProductImageSrc(s.id, s.categorySlug)}
-                      alt=""
+                      alt={`${s.lineLabel[locale]} — ${s.categoryName[locale]}`}
                       fill
                       sizes="(max-width: 640px) 25vw, 25vw"
                       className="object-cover transition duration-500 ease-out group-hover:scale-[1.05]"
@@ -271,5 +361,6 @@ export default async function ProductPage({ params }: Props) {
         </Link>
       </p>
     </div>
+    </>
   );
 }

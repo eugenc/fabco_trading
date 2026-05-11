@@ -10,16 +10,12 @@ export const PAGE_HERO_STOCK_SRC = {
     "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2400&q=85",
   contact:
     "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=2400&q=85",
-  export:
-    "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=2400&q=85",
-  import:
-    "https://images.unsplash.com/photo-1578575437130-527eeddb6405?auto=format&fit=crop&w=2400&q=85",
-  logistics:
-    "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=2400&q=85",
+  export: "/brand/services-export.png",
+  import: "/brand/services-import.png",
+  logistics: "/brand/services-logistics.png",
   markets:
     "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=2400&q=85",
-  products:
-    "https://images.unsplash.com/photo-1616596871445-bb8290a7a2c2?auto=format&fit=crop&w=2400&q=85",
+  products: "/brand/page-hero-products.png",
   privacy:
     "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2400&q=85",
 } as const;

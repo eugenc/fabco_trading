@@ -12,42 +12,6 @@ export type ServiceMegaItem = {
   description: string;
 };
 
-function ServiceMegaIcon({ slug }: { slug: "import" | "export" | "logistics" }) {
-  const common = "h-10 w-10 text-[var(--faf-green)]";
-  if (slug === "import") {
-    return (
-      <svg className={common} viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
-        <path d="M8 28V14l6-4h12l6 4v14" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M8 28h24M14 18v10M26 18v10" strokeLinecap="round" />
-        <path d="M17 10l3-3 3 3" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    );
-  }
-  if (slug === "export") {
-    return (
-      <svg className={common} viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
-        <rect x="9" y="13" width="22" height="17" rx="2" />
-        <path d="M13 13V10a2 2 0 012-2h10a2 2 0 012 2v3M20 8V6" strokeLinecap="round" />
-        <path d="M15 22h10M15 26h6" strokeLinecap="round" />
-      </svg>
-    );
-  }
-  return (
-    <svg className={common} viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
-      <path d="M6 28h28M8 28l4-10h16l4 10" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="12" cy="28" r="3" />
-      <circle cx="28" cy="28" r="3" />
-      <path d="M16 18h8M20 14v8" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function serviceSlugFromHref(href: string): "import" | "export" | "logistics" {
-  if (href.includes("export")) return "export";
-  if (href.includes("logistics")) return "logistics";
-  return "import";
-}
-
 export function ServicesNavDesktop({
   label,
   items,
@@ -68,6 +32,27 @@ export function ServicesNavDesktop({
   const [mounted, setMounted] = useState(false);
   const [megaTop, setMegaTop] = useState(0);
   const triggerRef = useRef<HTMLButtonElement>(null);
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const cancelCloseTimer = () => {
+    if (closeTimerRef.current != null) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  };
+
+  const scheduleClose = () => {
+    cancelCloseTimer();
+    closeTimerRef.current = setTimeout(() => {
+      closeTimerRef.current = null;
+      setOpen(false);
+    }, 200);
+  };
+
+  const openMenu = () => {
+    cancelCloseTimer();
+    setOpen(true);
+  };
 
   const routeActive =
     pathname != null && SERVICE_HREFS.some((h) => pathname === h || pathname.startsWith(`${h}/`));
@@ -96,20 +81,16 @@ export function ServicesNavDesktop({
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") {
+        cancelCloseTimer();
+        setOpen(false);
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
-  useEffect(() => {
-    if (!open) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = prev;
-    };
-  }, [open]);
+  useEffect(() => () => cancelCloseTimer(), []);
 
   const megaPanel =
     open && mounted ? (
@@ -118,7 +99,12 @@ export function ServicesNavDesktop({
           className="fixed bottom-0 left-0 right-0 z-[60] bg-[var(--faf-navy)]/20 backdrop-blur-[2px]"
           style={{ top: megaTop }}
           aria-hidden
-          onClick={() => setOpen(false)}
+          onMouseEnter={openMenu}
+          onMouseLeave={scheduleClose}
+          onClick={() => {
+            cancelCloseTimer();
+            setOpen(false);
+          }}
         />
         <div
           id="services-nav-menu"
@@ -126,6 +112,8 @@ export function ServicesNavDesktop({
           aria-labelledby="services-nav-trigger"
           className="fixed left-0 right-0 z-[70] max-h-[min(70vh,calc(100dvh-4rem))] overflow-y-auto overscroll-contain border-b border-[var(--faf-divider)] bg-[var(--faf-card)] shadow-xl"
           style={{ top: megaTop }}
+          onMouseEnter={openMenu}
+          onMouseLeave={scheduleClose}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="faf-container py-8 md:py-10">
@@ -139,41 +127,39 @@ export function ServicesNavDesktop({
                 <Link
                   href="/contact"
                   className="mt-8 inline-flex w-fit items-center rounded-lg bg-[var(--faf-cta)] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[var(--faf-cta-hover)]"
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    cancelCloseTimer();
+                    setOpen(false);
+                  }}
                 >
                   {quoteCta}
                 </Link>
               </div>
               <div className="grid gap-4 sm:grid-cols-3 lg:col-span-8">
-                {items.map((item) => {
-                  const slug = serviceSlugFromHref(item.href);
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="group flex flex-col rounded-xl border border-[var(--faf-divider)] bg-[var(--faf-bg)]/60 p-5 transition hover:border-[var(--faf-green)]/45 hover:bg-[var(--faf-card)] hover:shadow-md"
-                      onClick={() => setOpen(false)}
-                    >
-                      <div className="flex items-start justify-between gap-3">
-                        <div className="rounded-lg bg-[var(--faf-card)] p-2 shadow-sm ring-1 ring-[var(--faf-divider)] transition group-hover:ring-[var(--faf-green)]/30">
-                          <ServiceMegaIcon slug={slug} />
-                        </div>
-                        <span
-                          className="mt-1 text-[var(--faf-green)] transition group-hover:translate-x-0.5"
-                          aria-hidden
-                        >
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-                          </svg>
-                        </span>
-                      </div>
-                      <h3 className="mt-4 text-base font-bold text-[var(--faf-ink)]">{item.label}</h3>
-                      <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--faf-ink-muted)]">
-                        {item.description}
-                      </p>
-                    </Link>
-                  );
-                })}
+                {items.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="group flex flex-col rounded-xl border border-[var(--faf-divider)] bg-[var(--faf-bg)]/60 p-5 transition hover:border-[var(--faf-green)]/45 hover:bg-[var(--faf-card)] hover:shadow-md"
+                    onClick={() => {
+                      cancelCloseTimer();
+                      setOpen(false);
+                    }}
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="text-base font-bold text-[var(--faf-ink)]">{item.label}</h3>
+                      <span
+                        className="shrink-0 text-[var(--faf-green)] transition group-hover:translate-x-0.5"
+                        aria-hidden
+                      >
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                    </div>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--faf-ink-muted)]">{item.description}</p>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
@@ -183,7 +169,11 @@ export function ServicesNavDesktop({
 
   return (
     <>
-      <div className="relative">
+      <div
+        className="relative"
+        onMouseEnter={openMenu}
+        onMouseLeave={scheduleClose}
+      >
         <button
           ref={triggerRef}
           type="button"
@@ -196,7 +186,10 @@ export function ServicesNavDesktop({
           aria-controls="services-nav-menu"
           id="services-nav-trigger"
           aria-haspopup="dialog"
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => {
+            cancelCloseTimer();
+            setOpen((v) => !v);
+          }}
         >
           {label}
           <svg

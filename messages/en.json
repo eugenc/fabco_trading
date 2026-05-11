@@ -17,7 +17,7 @@
         "description": "Request a quote, partnership, or sourcing support. We confirm by email and follow up with your team."
       },
       "logistics": {
-        "title": "Logistics & supply chain | FAFCO",
+        "title": "Logistics & Supply Chain | FAFCO",
         "description": "Full-cycle sourcing, quality control, consolidation, and delivery — truck and sea freight worldwide."
       },
       "privacy": {
@@ -25,11 +25,11 @@
         "description": "How FAFCO collects, uses, and protects personal information when you use fafco.ca and request a quote."
       },
       "import": {
-        "title": "Import supply | FAFCO",
+        "title": "Import Supply | FAFCO",
         "description": "Imported food and feed products for distributors and industrial buyers — flexible terms and logistics support."
       },
       "export": {
-        "title": "Export commodities | FAFCO",
+        "title": "Export Commodities | FAFCO",
         "description": "Export-oriented agricultural, wood, and crop nutrition products from Canada and international markets."
       },
       "markets": {
@@ -162,20 +162,24 @@
     "catFeed": "Feed Products",
     "catFeedLead": "Soybean Cake, Meals, Grains, Blends, and Feed-Grade Oils & Fats.",
     "catFeedImageAlt": "Grain and feed materials for animal nutrition supply",
-    "catExport": "Export commodities",
+    "catExport": "Export Commodities",
     "catExportLead": "Pulses, canola, hops, wood products, fertilizers, and NPK blends.",
     "catExportImageAlt": "Cargo ship at sea — international export logistics",
-    "splitEyebrow": "Trade programs",
-    "splitTitle": "Import & export",
-    "splitSectionLead": "Structured import programs for food and feed buyers, and export sourcing for agricultural, wood, and crop nutrition lines.",
-    "splitImportTitle": "Import supply",
+    "splitEyebrow": "FAFCO Services",
+    "splitTitle": "Import, Export & Logistics",
+    "splitSectionLead": "Structured import programs for food and feed buyers, export sourcing for agricultural, wood, and crop nutrition lines, and logistics that bring your product to its country of destination.",
+    "splitImportTitle": "Import Supply",
     "splitImportBody": "Food and feed lines for supermarkets, distributors, and industrial buyers — with packaging and delivery flexibility.",
     "splitImportImageAlt": "Warehouse storage and stacked pallets — inbound food and feed supply",
-    "splitExportTitle": "Export commodities",
+    "splitExportTitle": "Export Commodities",
     "splitExportBody": "Canadian and international sourcing for agricultural, wood, and crop nutrition products.",
     "splitExportImageAlt": "Cargo ship at sea — international movement of export commodities",
     "splitImportCta": "Explore import",
     "splitExportCta": "Explore export",
+    "splitLogisticsTitle": "Logistics",
+    "splitLogisticsBody": "End-to-end coordination — documentation, consolidation, and transport — so shipments reach your destination on schedule.",
+    "splitLogisticsImageAlt": "Shipping containers and freight handling — delivery coordinated to destination",
+    "splitLogisticsCta": "Explore logistics",
     "logisticsEyebrow": "Supply chain",
     "logisticsSectionTitle": "From sourcing to final delivery",
     "logisticsSectionLead": "We coordinate sourcing, quality, documentation, consolidation, transport, and delivery with trusted partners.",
@@ -183,23 +187,28 @@
     "logisticsStepCards": [
       {
         "title": "Sourcing",
-        "subtitle": "Vetted suppliers, specifications, and transparent origin."
+        "subtitle": "Vetted suppliers, specifications, and transparent origin.",
+        "imageAlt": "Agricultural land and tractors — sourcing and transparent origin."
       },
       {
-        "title": "Quality control",
-        "subtitle": "Inspections, documentation, and compliance with your standards."
+        "title": "Quality Control",
+        "subtitle": "Inspections, documentation, and compliance with your standards.",
+        "imageAlt": "Product handling and inspection — quality and compliance."
       },
       {
-        "title": "Storage / consolidation",
-        "subtitle": "Warehousing, blending, and load planning with partners."
+        "title": "Storage / Consolidation",
+        "subtitle": "Warehousing, blending, and load planning with partners.",
+        "imageAlt": "Warehouse aisles and pallet storage — consolidation and load planning."
       },
       {
         "title": "Transport",
-        "subtitle": "Ocean, rail, and road moves coordinated end to end."
+        "subtitle": "Ocean, rail, and road moves coordinated end to end.",
+        "imageAlt": "Stacked shipping containers at port — ocean and intermodal freight."
       },
       {
         "title": "Delivery",
-        "subtitle": "Hand-off to destination with clear milestones."
+        "subtitle": "Hand-off to destination with clear milestones.",
+        "imageAlt": "Container yard and freight handling — delivery to destination."
       }
     ],
     "marketsEyebrow": "Our footprint",
@@ -210,12 +219,12 @@
     "marketsSeeCta": "See what markets FAFCO serves",
     "regions": [
       "Canada",
+      "United States",
       "Europe",
       "Eastern Europe",
       "Middle East",
       "Asia",
-      "Latin America",
-      "United States"
+      "Latin America"
     ],
     "ctaEyebrow": "Get started",
     "ctaTitle": "Looking for a reliable supply partner?",
@@ -320,84 +329,84 @@
     }
   },
   "importPage": {
-    "title": "Import supply",
+    "title": "Import Supply",
     "intro": "We source food and feed products for B2B buyers that need reliable volumes, documentation, and logistics coordination.",
-    "foodTitle": "Food product imports",
+    "foodTitle": "Food Product Imports",
     "foodBody": "From staple ingredients to preserved goods and beverages — aligned with wholesale and retail distribution needs.",
     "foodImageAlt": "Assorted food ingredients and pantry staples for B2B sourcing",
     "foodFeatures": [
-      "Staple ingredients & dry goods",
-      "Preserved goods & beverages",
-      "Wholesale & retail-grade supply"
+      "Staple Ingredients & Dry Goods",
+      "Preserved Goods & Beverages",
+      "Wholesale & Retail-Grade Supply"
     ],
-    "feedTitle": "Feed product imports",
+    "feedTitle": "Feed Product Imports",
     "feedBody": "Protein meals, grains, custom blends, and energy components for livestock and poultry sectors.",
     "feedImageAlt": "Bulk feed grains and protein meals for animal nutrition",
     "feedFeatures": [
-      "Protein meals & oilcakes",
-      "Grains & energy components",
-      "Custom feed-grade blends"
+      "Protein Meals & Oilcakes",
+      "Grains & Energy Components",
+      "Custom Feed-Grade Blends"
     ],
-    "termsTitle": "Packaging & delivery terms",
+    "termsTitle": "Packaging & Delivery Terms",
     "termsBody": "Flexible packaging where available and commercial terms including FOB, CIF, and EXW — structured to your corridor and incoterms preference.",
     "termsImageAlt": "Stacked pallets and packaged cargo at a logistics warehouse",
     "termsFeatures": [
-      "Flexible packaging options",
-      "FOB · CIF · EXW terms",
-      "Corridor-aligned execution"
+      "Flexible Packaging Options",
+      "FOB · CIF · EXW Terms",
+      "Corridor-Aligned Execution"
     ],
-    "logisticsTitle": "Logistics support",
+    "logisticsTitle": "Logistics Support",
     "logisticsBody": "We coordinate consolidation, documentation, and transport with vetted international logistics partners.",
     "logisticsImageAlt": "Shipping containers and freight handling for international trade",
     "logisticsFeatures": [
-      "Cargo consolidation",
-      "Trade documentation",
-      "Vetted freight partners"
+      "Cargo Consolidation",
+      "Trade Documentation",
+      "Vetted Freight Partners"
     ],
     "cta": "Request a quote"
   },
   "exportPage": {
-    "title": "Export commodities",
+    "title": "Export Commodities",
     "intro": "Export-oriented products from Canada and international markets — with emphasis on documentation, compliance, and reliable shipment execution.",
-    "agTitle": "Agricultural commodities",
+    "agTitle": "Agricultural Commodities",
     "agBody": "Including canola oil, lentils, peas, and related lines subject to seasonality and specifications.",
     "agImageAlt": "Agricultural fields at harvest — canola and pulse crops",
     "agFeatures": [
-      "Canola oil & lentils",
-      "Pulses & related lines",
-      "Seasonal specifications"
+      "Canola Oil & Lentils",
+      "Pulses & Related Lines",
+      "Seasonal Specifications"
     ],
-    "specialTitle": "Special crops",
+    "specialTitle": "Special Crops",
     "specialBody": "Including hops and other specialty agricultural products.",
     "specialImageAlt": "Specialty agricultural crops in cultivation",
     "specialFeatures": [
-      "Hops sourcing",
-      "Specialty agricultural crops",
-      "Origin-tuned programs"
+      "Hops Sourcing",
+      "Specialty Agricultural Crops",
+      "Origin-Tuned Programs"
     ],
-    "woodTitle": "Industrial & wood products",
+    "woodTitle": "Industrial & Wood Products",
     "woodBody": "Lumber, pellets, logs, and wood pulp grades as per market availability.",
     "woodImageAlt": "Stacked lumber and wood products at a sawmill",
     "woodFeatures": [
-      "Lumber, logs & pellets",
-      "Wood pulp grades",
-      "Market-driven availability"
+      "Lumber, Logs & Pellets",
+      "Wood Pulp Grades",
+      "Market-Driven Availability"
     ],
-    "fertTitle": "Fertilizers & crop nutrition",
-    "fertBody": "Potash, nitrogen, phosphate, and custom NPK blends tailored to soil and crop requirements.",
+    "fertTitle": "Fertilizers & Crop Nutrition",
+    "fertBody": "",
     "fertImageAlt": "Granular fertilizer and crop nutrition products in agriculture",
     "fertFeatures": [
-      "Potash · nitrogen · phosphate",
-      "Custom NPK blends",
-      "Soil & crop matched"
+      "Potash · Nitrogen · Phosphate",
+      "Custom NPK Blends",
+      "Soil & Crop Matched"
     ],
-    "complianceTitle": "Documentation & compliance",
+    "complianceTitle": "Documentation & Compliance",
     "complianceBody": "We support quality control and documentation workflows aligned with international trade practice.",
     "complianceImageAlt": "Trade compliance documents and analytics on a desk",
     "complianceFeatures": [
-      "Quality control workflows",
-      "Trade documentation",
-      "International standards"
+      "Quality Control Workflows",
+      "Trade Documentation",
+      "International Standards"
     ],
     "cta": "Request a quote"
   },
@@ -413,12 +422,16 @@
     "regionProductsEmpty": "No products are currently mapped to this region. Tell us what you are looking for and we will check feasibility.",
     "regionSourcingFrom": "Sourced from: {countries}",
     "viewProduct": "View product",
-    "clearSelection": "Show all"
+    "mapMarkerLinkAria": "View sourcing for {region}"
   },
   "about": {
     "title": "About us",
     "lead": "International B2B trading in food, feed, and agricultural commodities — reliable supply and transparent terms.",
-    "body": "FAFCO is an international B2B trading company focused on the supply of food products, feed materials, and agricultural commodities. We are built on hands-on experience in agriculture, logistics, and international trade. We understand the full supply chain — from production and storage to transportation and final delivery. Our goal is to provide reliable supply, transparent terms, and long-term partnerships. We work with partners across Canada, Europe, and Eastern Europe, offering flexible solutions tailored to each client's needs.",
+    "bodyParagraphs": [
+      "FAFCO is an international B2B trading company focused on the supply of food products, feed materials, and agricultural commodities.",
+      "We are built on hands-on experience in agriculture, logistics, and international trade. We understand the full supply chain — from production and storage to transportation and final delivery.",
+      "Our goal is to provide reliable supply, transparent terms, and long-term partnerships. We work with partners across Canada, Europe, and Eastern Europe, offering flexible solutions tailored to each client's needs."
+    ],
     "missionTitle": "Mission & approach",
     "missionBody": "We focus on transparent terms, disciplined execution, and long-term relationships — not one-off transactions.",
     "whyTitle": "Why clients work with us",
@@ -431,7 +444,7 @@
     "cta": "Start a conversation"
   },
   "logistics": {
-    "title": "Logistics & supply chain",
+    "title": "Logistics & Supply Chain",
     "intro": "We provide full-cycle supply chain management:",
     "bullets": [
       "Sourcing directly from producers",
@@ -443,22 +456,22 @@
     "cycleBody": "End-to-end coordination from origin to destination — sourcing, quality control, storage, transport, and final delivery handled as a single workflow.",
     "cycleImageAlt": "Trucks and warehouse operations — full-cycle supply chain",
     "cycleFeatures": [
-      "Direct producer sourcing",
-      "Storage & consolidation",
-      "Truck & sea transport"
+      "Direct Producer Sourcing",
+      "Storage & Consolidation",
+      "Truck & Sea Transport"
     ],
     "footer": "We work with reliable international logistics partners and ensure transparency at every stage of the supply process.",
     "incotermsTitle": "Flexible Incoterms",
     "incotermsBody": "We work with FOB, CIF, EXW and other commercially relevant terms depending on corridor, product, and buyer preference.",
     "incotermsImageAlt": "Crane loading shipping containers at an international port",
     "incotermsFeatures": [
-      "FOB — origin loading",
-      "CIF — destination port",
-      "EXW — factory pickup"
+      "FOB — Origin Loading",
+      "CIF — Destination Port",
+      "EXW — Factory Pickup"
     ]
   },
   "supply": {
-    "title": "Supply capabilities",
+    "title": "Supply Capabilities",
     "bullets": [
       "Tailored solutions for each client",
       "Contract-based supply",
@@ -469,9 +482,9 @@
     "body": "Programs structured around your specifications and volumes — built for repeat supply, not one-off transactions.",
     "imageAlt": "Business team coordinating long-term supply partnerships",
     "features": [
-      "Tailored programs",
-      "Contract-based supply",
-      "Long-term partnerships"
+      "Tailored Programs",
+      "Contract-Based Supply",
+      "Long-Term Partnerships"
     ]
   },
   "privacy": {

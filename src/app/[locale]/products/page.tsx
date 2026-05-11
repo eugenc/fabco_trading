@@ -16,11 +16,28 @@ function firstQueryValue(
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams?: Promise<{ category?: string | string[] }>;
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
+  const sp = searchParams ? await searchParams : {};
+  const categoryParam = firstQueryValue(sp.category);
+  if (
+    categoryParam === "food" ||
+    categoryParam === "feed" ||
+    categoryParam === "export"
+  ) {
+    return buildPageMetadata({
+      locale,
+      pathWithoutLocale: `/products?category=${encodeURIComponent(categoryParam)}`,
+      title: t(`categories.${categoryParam}.title`),
+      description: t(`categories.${categoryParam}.description`),
+      siteName: t("siteName"),
+    });
+  }
   return buildPageMetadata({
     locale,
     pathWithoutLocale: "/products",

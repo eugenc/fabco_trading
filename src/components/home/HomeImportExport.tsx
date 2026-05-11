@@ -24,6 +24,14 @@ export async function HomeImportExport() {
       imageAlt: t("splitExportImageAlt"),
       imageIndex: 1,
     },
+    {
+      href: "/logistics" as const,
+      title: t("splitLogisticsTitle"),
+      body: t("splitLogisticsBody"),
+      cta: t("splitLogisticsCta"),
+      imageAlt: t("splitLogisticsImageAlt"),
+      imageIndex: 2,
+    },
   ];
 
   return (
@@ -34,7 +42,7 @@ export async function HomeImportExport() {
           title={t("splitTitle")}
           subtitle={t("splitSectionLead")}
         />
-        <ul className="mt-10 grid gap-5 md:grid-cols-2 md:gap-6">
+        <ul className="mt-10 grid gap-5 md:grid-cols-3 md:gap-6">
           {cards.map((c) => (
             <li key={c.href} className="min-w-0">
               <Link
@@ -47,7 +55,7 @@ export async function HomeImportExport() {
                     alt={c.imageAlt}
                     fill
                     className="object-cover transition duration-500 ease-out group-hover:scale-[1.05]"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, 34vw"
                   />
                   <div
                     className="absolute inset-0 bg-gradient-to-t from-[var(--faf-navy)]/95 via-[var(--faf-navy)]/55 to-[var(--faf-navy)]/20"

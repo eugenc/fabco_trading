@@ -12,5 +12,5 @@ export const FEATURED_PRODUCT_IMAGE_SRCS: Record<
     "/brand/catalog/feed-soybean-cake-soybean-cake.png",
   "food-salt": "/brand/catalog/food-salt.png",
   "export-ag-commodities-canola-oil":
-    "https://images.unsplash.com/photo-1557351711-ac957cfa45dd?auto=format&fit=crop&w=1200&q=80",
+    "/brand/catalog/export-ag-commodities-canola-oil.png",
 };

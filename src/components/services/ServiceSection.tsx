@@ -32,11 +32,15 @@ export function ServiceSection({
         <h2 className="text-xl font-semibold text-[var(--faf-ink)] sm:text-2xl">
           {title}
         </h2>
-        <p className="mt-3 text-[var(--faf-ink-muted)] leading-relaxed">
-          {body}
-        </p>
+        {body.trim() ? (
+          <p className="mt-3 text-[var(--faf-ink-muted)] leading-relaxed">
+            {body}
+          </p>
+        ) : null}
         {features.length > 0 ? (
-          <ul className="mt-5 flex flex-col gap-2.5">
+          <ul
+            className={`flex flex-col gap-2.5 ${body.trim() ? "mt-5" : "mt-3"}`}
+          >
             {features.map((f) => (
               <li
                 key={f}

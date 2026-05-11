@@ -3,7 +3,7 @@
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import type { RegionCode } from "@/lib/markets-regions";
 
@@ -25,18 +25,28 @@ export type RegionView = {
 
 type MarketsRegionsExplorerProps = {
   regions: RegionView[];
+  /** From `/markets?region=…` — keeps tab selection in sync when the URL changes. */
+  initialSelectedCode?: RegionCode;
 };
 
 export function MarketsRegionsExplorer({
   regions,
+  initialSelectedCode = "CA",
 }: MarketsRegionsExplorerProps) {
   const t = useTranslations("marketsPage");
-  const [selectedCode, setSelectedCode] = useState<RegionCode | null>(null);
-
-  const selected = useMemo(
-    () => regions.find((r) => r.code === selectedCode) ?? null,
-    [regions, selectedCode]
+  const [selectedCode, setSelectedCode] = useState<RegionCode>(
+    initialSelectedCode
   );
+
+  useEffect(() => {
+    setSelectedCode(initialSelectedCode);
+  }, [initialSelectedCode]);
+
+  const selected = useMemo(() => {
+    return (
+      regions.find((r) => r.code === selectedCode) ?? regions[0] ?? null
+    );
+  }, [regions, selectedCode]);
 
   return (
     <section
@@ -71,7 +81,7 @@ export function MarketsRegionsExplorer({
               aria-selected={active}
               aria-controls={`region-panel-${r.code}`}
               id={`region-tab-${r.code}`}
-              onClick={() => setSelectedCode(active ? null : r.code)}
+              onClick={() => setSelectedCode(r.code)}
               className={[
                 "rounded-full px-4 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--faf-brand)]",
                 active
@@ -83,15 +93,6 @@ export function MarketsRegionsExplorer({
             </button>
           );
         })}
-        {selected && (
-          <button
-            type="button"
-            onClick={() => setSelectedCode(null)}
-            className="rounded-full px-4 py-2 text-sm font-medium text-[var(--faf-ink-muted)] underline-offset-4 hover:text-[var(--faf-ink)] hover:underline"
-          >
-            {t("clearSelection")}
-          </button>
-        )}
       </div>
 
       {selected && (

@@ -2,6 +2,11 @@ import { QUOTEABLE_ITEMS, type QuoteableItem } from "@/lib/catalog";
 
 export type RegionCode = "CA" | "US" | "EU" | "EE" | "ME" | "AS" | "LATAM";
 
+/** Query string used to pre-select a region on `/markets`. */
+export function marketsPageHref(region: RegionCode): string {
+  return `/markets?region=${region}`;
+}
+
 /**
  * Region definitions for the markets page. Order matches the
  * `messages.home.regions` array so localized labels resolve by index.
@@ -12,7 +17,7 @@ export type RegionCode = "CA" | "US" | "EU" | "EE" | "ME" | "AS" | "LATAM";
  */
 export type RegionDef = {
   code: RegionCode;
-  /** Index into `home.regions` localized array (Canada, Europe, …, United States). */
+  /** Index into `home.regions` localized array (Canada, United States, Europe, …). */
   labelIndex: number;
   /** Canonical EN country labels mapped to this region. */
   countries: readonly string[];
@@ -20,28 +25,28 @@ export type RegionDef = {
 
 export const MARKET_REGIONS: readonly RegionDef[] = [
   { code: "CA", labelIndex: 0, countries: ["Canada"] },
-  { code: "EU", labelIndex: 1, countries: ["Spain", "Greece", "Turkey"] },
+  { code: "US", labelIndex: 1, countries: ["USA"] },
+  { code: "EU", labelIndex: 2, countries: ["Spain", "Greece", "Turkey"] },
   {
     code: "EE",
-    labelIndex: 2,
+    labelIndex: 3,
     countries: ["Ukraine", "Poland", "Bulgaria"],
   },
   {
     code: "ME",
-    labelIndex: 3,
+    labelIndex: 4,
     countries: ["Middle East", "Morocco"],
   },
   {
     code: "AS",
-    labelIndex: 4,
+    labelIndex: 5,
     countries: ["Bangladesh", "Thailand", "Azerbaijan", "Georgia"],
   },
   {
     code: "LATAM",
-    labelIndex: 5,
+    labelIndex: 6,
     countries: ["Brazil", "Ecuador", "Colombia", "Mexico", "Costa Rica"],
   },
-  { code: "US", labelIndex: 6, countries: ["USA"] },
 ] as const;
 
 const REGION_BY_CODE: Record<RegionCode, RegionDef> = MARKET_REGIONS.reduce(
@@ -56,8 +61,9 @@ export function getRegionByCode(code: RegionCode): RegionDef {
   return REGION_BY_CODE[code];
 }
 
-function parseOriginCountries(originEn: string): string[] {
-  return originEn
+/** Comma-separated canonical origin labels; used by markets and product UI. */
+export function parseOriginCountries(origin: string): string[] {
+  return origin
     .split(",")
     .map((s) => s.trim())
     .filter((s) => s.length > 0);

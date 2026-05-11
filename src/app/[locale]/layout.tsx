@@ -1,30 +1,13 @@
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 import { routing } from "@/i18n/routing";
-import { buildPageMetadata } from "@/lib/metadata";
-import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "meta" });
-  return buildPageMetadata({
-    locale,
-    pathWithoutLocale: "",
-    title: t("title"),
-    description: t("description"),
-    siteName: t("siteName"),
-  });
 }
 
 export default async function LocaleLayout({
@@ -43,6 +26,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
+      <SiteJsonLd locale={locale} />
       <SiteHeader />
       <main className="flex w-full flex-1 flex-col">{children}</main>
       <SiteFooter />

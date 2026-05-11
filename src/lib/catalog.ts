@@ -264,10 +264,6 @@ export const CATEGORIES: CatalogCategory[] = [
           en: "Fertilizers & Crop Nutrition",
           fr: "Engrais et nutrition des cultures",
         },
-        note: {
-          en: "Potash, nitrogen, and phosphate fertilizers; custom NPK blends tailored to soil and crop requirements.",
-          fr: "Engrais potassiques, azotés et phosphatés ; mélanges NPK sur mesure selon les sols et cultures.",
-        },
         items: [
           { en: "Potash Fertilizers", fr: "Engrais potassiques" },
           { en: "Nitrogen Fertilizers", fr: "Engrais azotés" },

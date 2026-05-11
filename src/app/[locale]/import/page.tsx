@@ -1,6 +1,8 @@
 import { PageHero } from "@/components/PageHero";
 import { ServiceSection } from "@/components/services/ServiceSection";
+import { IMPORT_EXPORT_IMAGE_SRCS } from "@/data/importExportCardImages";
 import { PAGE_HERO_STOCK_SRC } from "@/data/pageHeroStock";
+import { PRODUCT_CATEGORY_IMAGE_SRCS } from "@/data/productCategoryCardImages";
 import { SERVICE_SECTION_IMAGES } from "@/data/serviceSectionImages";
 import { Link } from "@/i18n/navigation";
 import { buildPageMetadata } from "@/lib/metadata";
@@ -31,18 +33,27 @@ export default async function ImportPage() {
   const featuresFor = (key: string) =>
     (importMessages[key] as string[] | undefined) ?? [];
 
+  const [foodProductsImageSrc, feedProductsImageSrc] = PRODUCT_CATEGORY_IMAGE_SRCS;
+  const logisticsImageSrc = IMPORT_EXPORT_IMAGE_SRCS[2];
+
   const sections = [
     {
       title: t("foodTitle"),
       body: t("foodBody"),
       features: featuresFor("foodFeatures"),
-      image: { src: SERVICE_SECTION_IMAGES.import.food, alt: t("foodImageAlt") },
+      image: {
+        src: foodProductsImageSrc,
+        alt: t("foodImageAlt"),
+      },
     },
     {
       title: t("feedTitle"),
       body: t("feedBody"),
       features: featuresFor("feedFeatures"),
-      image: { src: SERVICE_SECTION_IMAGES.import.feed, alt: t("feedImageAlt") },
+      image: {
+        src: feedProductsImageSrc,
+        alt: t("feedImageAlt"),
+      },
     },
     {
       title: t("termsTitle"),
@@ -58,7 +69,7 @@ export default async function ImportPage() {
       body: t("logisticsBody"),
       features: featuresFor("logisticsFeatures"),
       image: {
-        src: SERVICE_SECTION_IMAGES.import.logisticsSupport,
+        src: logisticsImageSrc,
         alt: t("logisticsImageAlt"),
       },
     },

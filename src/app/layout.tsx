@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { SetHtmlLang } from "@/components/SetHtmlLang";
-import { getSiteUrl } from "@/lib/env";
+import { rootMetadataDefaults } from "@/lib/metadata";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -15,8 +15,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(getSiteUrl()),
+export const metadata: Metadata = rootMetadataDefaults();
+
+export const viewport: Viewport = {
+  themeColor: "#1f2a37",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
