@@ -510,12 +510,14 @@
   },
   "footer": {
     "rights": "© {year} FAFCO. Tous droits réservés.",
-    "tagline": "Aliments et alimentation animale — approvisionnement B2B international.",
     "companyTitle": "Entreprise",
-    "productsTitle": "Produits",
+    "productsTitle": "Catalogue produits",
+    "allProducts": "Tous les produits",
     "regionsTitle": "Marchés et régions",
     "contactTitle": "Contact",
-    "contactLead": "Demandez un devis ou parlez volumes et destinations."
+    "builtByBefore": "Réalisé par ",
+    "builtByLabel": "Affiniti Venture Studio",
+    "opensInNewTab": "(s’ouvre dans un nouvel onglet)"
   },
   "common": {
     "learnMore": "En savoir plus",

@@ -510,12 +510,14 @@
   },
   "footer": {
     "rights": "© {year} FAFCO. All rights reserved.",
-    "tagline": "Food & Feed Trading — international B2B supply.",
     "companyTitle": "Company",
-    "productsTitle": "Products",
+    "productsTitle": "Product catalog",
+    "allProducts": "All products",
     "regionsTitle": "Markets & regions",
     "contactTitle": "Contact",
-    "contactLead": "Request a quote or discuss volumes and destinations."
+    "builtByBefore": "Built by ",
+    "builtByLabel": "Affiniti Venture Studio",
+    "opensInNewTab": "(opens in new tab)"
   },
   "common": {
     "learnMore": "Learn more",
